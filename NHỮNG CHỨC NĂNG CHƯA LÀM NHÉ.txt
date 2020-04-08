@@ -1,0 +1,13 @@
+Quản trị
+- quản trị đơn hàng: chưa làm 
+- gửi email trả lời phản hồi: chưa làm
+- các biểu đồ báo cáo ở trang quản trị: chưa làm
+Website
+- đăng ký: chưa làm được
+- đổi mật khẩu: chưa làm
+- bình luận: chưa làm
+- giỏ hàng: chưa làm
+- lọc thông tin tìm kiếm ở trang đội ngũ: chưa làm
+- gửi email thông báo thuê thành công: chưa làm
+
+Mới thế thôi có gì nghĩ tiếp =))
