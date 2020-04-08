@@ -24,7 +24,19 @@ class Doi_ngu extends CI_Controller {
 	{
 		$data['doi_ngu'] = $this->nhan_vien->lay_doi_ngu();
 
+		$query1 = $this->db->query("
+			SELECT *
+			FROM tbl_doi_ngu
+			ORDER BY ngay_tao DESC limit 3
+		");
+
+		$data['nhan_vien_moi'] = $query1->result();
+
+		$this->load->view('menu');
+
 		$this->load->view('doi_ngu', $data);
+
+		$this->load->view('footer');
 	}
 
 }

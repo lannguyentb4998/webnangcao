@@ -25,7 +25,7 @@ class Tin_tuc extends CI_Controller {
 		$data['tin_tuc'] = $this->m_tin_tuc->lay_tin_tuc();
 
 		$query = $this->db->query("
-			SELECT tieu_de, tac_gia, noi_dung_doc_thu, date(ngay_tao) as ngay_tao 
+			SELECT anh_minh_hoa_1,tieu_de, tac_gia, noi_dung_doc_thu, date(ngay_tao) as ngay_tao 
 			FROM tbl_tin_tuc
 			ORDER BY ngay_tao DESC limit 3
 
@@ -40,6 +40,8 @@ class Tin_tuc extends CI_Controller {
 		$data['bai_viet_gan_day'] = $query->result();
 		$data['nhan_vien_moi'] = $query1->result();
 
+		$this->load->view('menu');
 		$this->load->view('tin_tuc',$data);
+		$this->load->view('footer');
 	}
 }
