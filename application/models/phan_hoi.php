@@ -21,17 +21,19 @@ Class phan_hoi extends CI_Model {
 
 	public function them_moi_phan_hoi()
 	{
-		if(isset($_POST['txtHoTen']) && isset($_POST['txtEmail'])&& isset($_POST['txtNoiDung'])){
+		if(isset($_POST['txtHoTen']) && isset($_POST['txtEmail'])&& isset($_POST['txtNoiDung'])&& isset($_POST['txtTieuDe'])){
 		// Dữ liệu thu được từ FORM nhập dữ liệu
 			$ho_ten = $_POST['txtHoTen'];
 			$email = $_POST['txtEmail'];
 			$noi_dung = $_POST['txtNoiDung'];
+			$tieu_de = $_POST['txtTieuDe'];
 
 			// Đẩy dữ liệu này vào CSDL
 			$data = array(
 				'ho_ten' => $ho_ten,
 				'tai_khoan' => $email,
-				'noi_dung_phan_hoi' => $noi_dung
+				'noi_dung_phan_hoi' => $noi_dung,
+				'tieu_de' => $tieu_de
 			);
 
 			// Thực hiện chèn dữ liệu vào bảng TIN TỨC

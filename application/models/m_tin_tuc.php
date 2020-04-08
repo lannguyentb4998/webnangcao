@@ -91,7 +91,7 @@ Class m_tin_tuc extends CI_Model {
         public function bai_viet_gan_day()
         {
         	$query = $this->db->query("
-			SELECT tieu_de, tac_gia, noi_dung_doc_thu, date(ngay_tao) as ngay_tao 
+			SELECT anh_minh_hoa_1,tieu_de, tac_gia, noi_dung_doc_thu, date(ngay_tao) as ngay_tao 
 			FROM tbl_tin_tuc
 			ORDER BY ngay_tao DESC limit 3
 
