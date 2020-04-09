@@ -6,7 +6,6 @@ Website
 - đăng ký: chưa làm được
 - đổi mật khẩu: chưa làm
 - bình luận: chưa làm
-- giỏ hàng: chưa làm
 - lọc thông tin tìm kiếm ở trang đội ngũ: chưa làm
 - gửi email thông báo thuê thành công: chưa làm
 
