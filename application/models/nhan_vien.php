@@ -4,7 +4,7 @@ Class nhan_vien extends CI_Model {
 	{
 		//Viết câu lệnh truy vấn SQL
 		$query = $this->db->query("
-			SELECT  id,ten_nv, (YEAR(CURDATE()) - YEAR(ngay_sinh)) - (RIGHT(CURDATE(), 5) < RIGHT(ngay_sinh, 5)) as tuoi, don_gia, gioi_thieu, so_nam_kinh_nghiem, anh_minh_hoa
+			SELECT  id,name, (YEAR(CURDATE()) - YEAR(ngay_sinh)) - (RIGHT(CURDATE(), 5) < RIGHT(ngay_sinh, 5)) as tuoi, price, gioi_thieu, so_nam_kinh_nghiem, anh_minh_hoa
 			FROM tbl_doi_ngu
 		");
 		
