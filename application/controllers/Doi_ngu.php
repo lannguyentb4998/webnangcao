@@ -18,6 +18,8 @@ class Doi_ngu extends CI_Controller {
 
 		// Kết nối đến MODEL
 		$this->load->model('nhan_vien');
+
+		$this->load->library('cart');
 	}
 
 	public function index()
@@ -38,5 +40,18 @@ class Doi_ngu extends CI_Controller {
 
 		$this->load->view('footer');
 	}
+
+	public function add()
+        {
+            $insert_data = array(
+            	'id' => $this->input->post('id'),
+                'name' => $this->input->post('name'),
+                'price' => $this->input->post('price'),
+                'qty' => 1
+            );
+        $this->cart->insert($insert_data);
+        redirect(base_url().'gio_hang');
+        }
+
 
 }
