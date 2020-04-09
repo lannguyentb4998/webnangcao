@@ -1,5 +1,4 @@
 
-
     <!-- ##### Breadcrumb Area Start ##### -->
     <div class="breadcrumb-area">
         <!-- Top Breadcrumb Area -->
@@ -140,7 +139,7 @@
                                     <a href="shop-details.html"> <img src="<?=base_url();?>/img/bg-img/<?=$row->anh_minh_hoa;?>" alt=""></a>
                                 </div>
                                 <div class="product-info">
-                                    <a href="shop-details.html"><?=$row->ten_nv?></a>
+                                    <a href="shop-details.html"><?=$row->name?></a>
                                     <div class="ratings">
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
@@ -166,6 +165,9 @@
                         <div class="row">
                         <?php foreach ($doi_ngu as $row) {
                          ;?>
+                                             
+                        
+ 
                             <!-- Single Product Area -->
                             <div class="col-12 col-sm-6 col-lg-4">
                                 <div class="single-product-area mb-50">
@@ -176,21 +178,22 @@
                                         <div class="product-tag">
                                             <a href="#">Hot</a>
                                         </div>
-                                        <div class="product-meta d-flex">
-                                            <a href="#" class="wishlist-btn"><i class="icon_heart_alt"></i></a>
-                                            <a href="gio_hang" class="add-to-cart-btn">Thuê</a>
-                                            <a href="#" class="compare-btn"><i class="arrow_left-right_alt"></i></a>
-                                        </div>
                                     </div>
                                     <!-- Product Info -->
                                     <div class="product-info mt-15 text-center">
                                         <a href="doi_ngu_chi_tiet">
-                                            <p><?=$row->ten_nv?></p>
+                                            <p><?=$row->name?></p>
                                         </a>
-                                        <h6><?=$row->don_gia?>VNĐ</h6>
+                                        <h6><?=$row->price?>VNĐ</h6>
+                                        <form action="<?php echo base_url('doi_ngu/add') ?>" method="post" accept-charset="utf-8">
+                                        <a><input type="submit" name="action"  class="btn alazea-btn w-30" value="Thuê"> </a>
+                                        <input type="hidden" name="id" value="<?php echo $row->id; ?>"/>
+    <input type="hidden" name="name" value="<?php echo $row->name; ?>"/>
+    <input type="hidden" name="price" value="<?php echo $row->price; ?>"/>  </form>
                                     </div>
                                 </div>
                             </div>
+                            </form> 
                              <?php
                             }
                             ;?>

@@ -1,4 +1,5 @@
 
+    
     <!-- ##### Breadcrumb Area Start ##### -->
     <div class="breadcrumb-area">
         <!-- Top Breadcrumb Area -->
@@ -23,13 +24,22 @@
 
     <!-- ##### Cart Area Start ##### -->
     <div class="cart-area section-padding-0-100 clearfix">
+        
         <div class="container">
             <div class="row">
                 <div class="col-12">
+                    <div class=" breadcrumb justify-content-center " style="background: #ffffff">
+                            <?php $cart_check = $this->cart->contents();
+                            if(empty($cart_check)) {
+                            echo '<h4>Giỏ hàng của bạn chưa có sản phẩm nào ! </h4>';
+                            } 
+                            else {}?> 
+                        </div>
                     <div class="cart-table clearfix">
                         <table class="table table-responsive">
                             <thead>
                                 <tr>
+                                    <th>STT</th>
                                     <th>Họ tên</th>
                                     <th>Giờ</th>
                                     <th>Giá</th>
@@ -39,20 +49,36 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td class="cart_product_img">
-                                        <a href="#"><img src="img/bg-img/nv1.jpg" alt="Product"></a>
-                                        <h5>Nguyễn Văn Anh</h5>
+                                <?php
+                                    echo form_open(base_url().'gio_hang/update_cart'); 
+                                    $cart = $this->cart->contents();
+                                    $grand_total = 0;
+                                    $i = 1;
+                                    foreach ($cart as $item):
+                                        echo form_hidden('cart[' . $item['id'] . '][id]', $item['id']);
+                                        echo form_hidden('cart[' . $item['id'] . '][rowid]', $item['rowid']);
+                                        echo form_hidden('cart[' . $item['id'] . '][name]', $item['name']);
+                                        echo form_hidden('cart[' . $item['id'] . '][price]', $item['price']);
+                                        echo form_hidden('cart[' . $item['id'] . '][qty]', $item['qty']);
+                                ?>
+                                <tr>
+                                    <td><?php echo $i++; ?></td>
+                                    <td class="name">
+                                        <h5><?php echo $item['name']; ?></h5>
                                     </td>
                                     <td class="qty">
                                         <div class="quantity">
-                                            <span class="qty-minus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty ) &amp;&amp; qty &gt; 1 ) effect.value--;return false;"><i class="fa fa-minus" aria-hidden="true"></i></span>
-                                            <input type="number" class="qty-text" id="qty" step="1" min="1" max="99" name="quantity" value="1">
-                                            <span class="qty-plus" onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty )) effect.value++;return false;"><i class="fa fa-plus" aria-hidden="true"></i></span>
+                                           
+                                            <?php echo form_input('cart[' . $item['id'] . '][qty]', $item['qty'], 'maxlength="2" size="1" style="text-align: center"'); ?>
+                                           
                                         </div>
                                     </td>
-                                    <td class="price"><span>20000</span></td>
-                                    <td class="total_price"><span>20000</span></td>
-                                    <td class="action"><a href="#"><i class="icon_close"></i></a></td>
+                                    <td class="price"><span><?php echo number_format($item['price']); ?> VNĐ</span></td>
+                                     <?php $grand_total = $grand_total + $item['subtotal']; ?>
+                                    <td class="total_price"><span><?php echo number_format($item['subtotal']) ?></span>VNĐ</td>
+                                    <td class="action"><a href="<?php echo base_url('gio_hang/remove/' . $item['rowid']); ?>"><i class="icon_close"></i></a></td>
+                                    <?php endforeach; ?>
+                                </tr>
                                 </tr>
                             </tbody>
                         </table>
@@ -60,17 +86,28 @@
                 </div>
             </div>
 
-            <div class="row">
 
+            <div class="row">
+                <div class="col-12 col-lg-8">
+                </div>
+                <div class="col-12 col-lg-2">
+                    <div class="action">
+                            <a href="<?php echo base_url('gio_hang/remove/all'); ?>"><input type="button" value="Xóa Đơn Hàng" class="btn alazea-btn w-100"></a>
+                        </div>
+                    
+                </div>
+                <div class="col-12 col-lg-2">
+                </div>
+                
+            </div>
+
+            <div class="row">
                 <!-- Coupon Discount -->
-                <div class="col-12 col-lg-6">
+               <div class="col-12 col-lg-6">
                     <div class="coupon-discount mt-70">
                         <h5>Khuyến mãi</h5>
-                        <p>Nếu bạn có voucher khuyến mai, vui lòng nhập mã tại đây</p>
-                        <form action="#" method="post">
-                            <input type="text" name="coupon-code" placeholder="Enter your coupon code">
-                            <button type="submit">XÁC NHẬN</button>
-                        </form>
+                        <p>Hiện tại chúng tôi chưa có chương trình khuyến mãi. Chúng tôi sẽ cập nhật sau.</p> 
+                        <p>Cảm ơn quý khách.</p>
                     </div>
                 </div>
 
@@ -80,10 +117,10 @@
                         <h5 class="title--">GIỎ HÀNG</h5>
                         <div class="total d-flex justify-content-between">
                             <h5>Tổng tiền</h5>
-                            <h5>20000 VNĐ</h5>
+                            <h5><?php echo number_format($grand_total); ?> VNĐ</h5>
                         </div>
                         <div class="checkout-btn">
-                            <a href="#" class="btn alazea-btn w-100">THUÊ</a>
+                            <a href="<?php echo base_url('thanh_toan') ?>" class="btn alazea-btn w-100">THUÊ</a>
                         </div>
                     </div>
                 </div>

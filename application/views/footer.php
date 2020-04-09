@@ -55,7 +55,7 @@
                                     <a href="shop-details"><img src="<?=base_url();?>/img/bg-img/<?=$row->anh_minh_hoa;?>" alt=""></a>
                                 </div>
                                 <div class="product-info">
-                                    <a href="shop-details"><?=$row->ten_nv?></a>
+                                    <a href="shop-details"><?=$row->name?></a>
                                     <p><?=$row->so_nam_kinh_nghiem?> năm kinh nghiệm</p>
                                 </div>
                             </div>
