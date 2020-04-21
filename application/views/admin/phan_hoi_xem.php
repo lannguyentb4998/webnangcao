@@ -235,30 +235,29 @@
 
                             </div>
                         </div>
-                        <?php foreach ($phan_hoi as $row) {
-                         ;?>
+                        
                         <div class=" mail-window-body">
                             <div class="row p-t-20 p-b-20">
                                 <div class="col-md-2 m-b-20">
                                 </div>
                                 <div class="col-md-8 m-b-20">
-                                    <h3 class="m-0"><?=$row->tieu_de;?> <i
+                                    <h3 class="m-0"><?=$phan_hoi->tieu_de;?> <i
                                                 class="mdi mdi-star text-warning"></i></h3>
                                     <p>
-                                        <small class="text-muted"><?=$row->thoi_gian_phan_hoi;?></small>
+                                        <small class="text-muted"><?=$phan_hoi->thoi_gian_phan_hoi;?></small>
 
                                     </p>
                                     <div class="media">
                                         
                                         <div class="media-body my-auto">
-                                            <h6 class="m-0"><?=$row->ho_ten;?></h6>
-                                            <p class="text-muted"><?=$row->tai_khoan;?></p>
+                                            <h6 class="m-0"><?=$phan_hoi->ho_ten;?></h6>
+                                            <p class="text-muted"><?=$phan_hoi->tai_khoan;?></p>
                                         </div>
                                     </div>
 
                                     <div class="pt-2" style="text-align: justify;">
                                         <p>
-                                            <?=$row->noi_dung;?>
+                                            <?=$phan_hoi->noi_dung_phan_hoi;?>
                                         </p>
                                     </div>
                                     <hr>
@@ -275,9 +274,7 @@
 
                             </div>
                         </div>
-                         <?php
-                            }
-                            ;?>
+                         
                     </div>
                 </div>
             </div>

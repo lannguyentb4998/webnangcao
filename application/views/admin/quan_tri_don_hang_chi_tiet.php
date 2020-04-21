@@ -35,7 +35,7 @@
 <!--Material Icons-->
 <link rel='stylesheet' type='text/css' href='https://d33wubrfki0l68.cloudfront.net/css/0940f25997c8e50e65e95510b30245d116f639f0/light/assets/fonts/feather/feather-icons.css'/>
 <!--Bootstrap + atmos Admin CSS-->
-<link rel='stylesheet' type='text/css' href='C:/wgetdown/admin/assets/css/atmos.min.css'/>
+<link rel='stylesheet' type='text/css' href='<?=base_url();?>atmos.min.css'/>
 <!-- Additional library for page -->
 
 
@@ -217,8 +217,8 @@
 <!--site header ends -->    <section class="admin-content ">
         <div class="bg-dark m-b-30">
             <div class="container">
-                <div class="row p-b-60 p-t-60">
-
+                <div class="don_hang_chi_tiet p-b-60 p-t-60">
+                    
                     <div class="col-md-6 text-white p-b-30">
                         <div class="media">
                             <div class="avatar avatar mr-3">
@@ -226,12 +226,13 @@
 
                                 </div>
                             </div>
+
                             <div class="media-body">
                                 <div class="opacity-75">Đến,</div>
-                                <h4 class="m-b-0">Nguyễn Trà My </h4>
+                                <h4 class="m-b-0"><?=$don_hang_chi_tiet->ten_kh;?></h4>
                                 <p class="opacity-75">
-                                   Mã hóa đơn #0047 <br>
-                                    Ngày đặt : 02/29/2018
+                                   Mã hóa đơn <?=$don_hang_chi_tiet->id;?> <br>
+                                    Ngày đặt : <?=$don_hang_chi_tiet->ngay_tao;?>
                                 </p>
                                 <button class="btn btn-white-translucent" id="printDiv" > <i class="mdi
                                 mdi-printer"></i>
@@ -243,10 +244,10 @@
                     <div class="col-md-3 text-center m-b-30 ml-auto">
                         <div class="rounded text-white bg-white-translucent">
                             <div class="p-all-15">
-                                <div class="row">
+                                <div class="don_hang_chi_tiet">
                                     <div class="col-md-12">
                                         <div class="text-overline    opacity-75">Tổng tiền</div>
-                                        <h3 class="m-0 text-success">$1500</h3>
+                                        <h3 class="m-0 text-success"><?=$don_hang_chi_tiet->tong_tien;?> VNĐ</h3>
                                     </div>
                                    
                                 </div>
@@ -260,28 +261,26 @@
         </div>
         <div class="pull-up">
             <div class="container" id="printableArea">
-                <div class="row"  >
+                <div class="don_hang_chi_tiet"  >
                     <div class="col-md-12 m-b-40">
                         <div class="card">
                             <div class="card-body">
-                                <div class="row">
+                                <div class="don_hang_chi_tiet">
                                     <div class="col-md-6">
                                         <img src="assets/img/logos/nytimes.jpg" width="60" class="rounded-circle"
                                              alt="">
                                         <address class="m-t-10">
                                             Đến,<br>
-                                            <span class="h4 font-primary"> Nguyễn Trà My,</span> <br>
-                                            The New York Times Building <br>
-                                            620 Eighth Avenue <br>
-                                            New York City, New York 10018 <br>
+                                            <span class="h4 font-primary"> <?=$don_hang_chi_tiet->ten_kh;?>,</span> <br>
+                                            <?=$don_hang_chi_tiet->quan;?> <br><?=$don_hang_chi_tiet->thanh_pho;?> <br>
 
 
                                         </address>
                                     </div>
-                                    <div class="col-md-6 text-right my-auto">
-                                        <h1 class="font-primary">HÓA ĐƠN</h1>
-                                        <div class="">Mã hóa đơn: #0047</div>
-                                        <div class="">Ngày đặt: 02/29/18</div>
+                                    <div class="col-md-12 text-right my-auto">
+                                        <h1 class="font-primary" style="text-align: center;">HÓA ĐƠN</h1>
+                                        <div class="">Mã hóa đơn: <?=$don_hang_chi_tiet->id;?></div>
+                                        <div class="">Ngày đặt: <?=$don_hang_chi_tiet->ngay_tao;?></div>
                                     </div>
                                 </div>
 
@@ -289,7 +288,7 @@
                                     <table class="table m-t-50">
                                         <thead>
                                         <tr>
-                                            <th class="">Sản phẩm</th>
+                                            <th class="">Nhân viên</th>
                                             <th class="text-center">Đơn giá</th>
                                             <th class="text-center">Giờ</th>
                                             <th class="text-right">Thành tiền</th>
@@ -298,14 +297,12 @@
                                         <tbody>
                                         <tr>
                                             <td class="">
-                                                <p class="text-black m-0">Nguyễn Văn An</p>
-                                                <p class="text-muted">
-                                                    Dịch vụ chăm sóc cây tại nhà.
-                                                </p>
+                                                <p class="text-black m-0"><?php echo $don_hang_chi_tiet->ten_nv;?></p>
+                                                
                                             </td>
-                                            <td class="text-center">$65.00</td>
-                                            <td class="text-center">120</td>
-                                            <td class="text-right">$7800</td>
+                                            <td class="text-center"><?php echo $don_hang_chi_tiet->don_gia;?> VNĐ</td>
+                                            <td class="text-center"><?php echo $don_hang_chi_tiet->so_luong;?></td>
+                                            <td class="text-right"><?php echo $don_hang_chi_tiet->thanh_tien;?> VNĐ</td>
                                         </tr>
 
                                         <tr>
@@ -313,7 +310,7 @@
                                                 Thành tiền
                                             </td>
                                             <td colspan="2" class="text-right">
-                                                $ 28890
+                                                <?=$don_hang_chi_tiet->tong_tien;?> VNĐ
                                             </td>
                                         </tr>
                                         <tr>
@@ -321,7 +318,7 @@
                                                 Khuyến mại
                                             </td>
                                             <td colspan="2" class="text-right">
-                                                - $1500
+                                                0 VNĐ
                                             </td>
                                         </tr>
 
@@ -330,7 +327,7 @@
                                                 Tổng tiền
                                             </td>
                                             <td colspan="2" class="text-right">
-                                                $ 32,590.2
+                                                <?=$don_hang_chi_tiet->tong_tien;?> VNĐ
                                             </td>
                                         </tr>
                                         </tbody>
@@ -348,6 +345,7 @@
                             </div>
                         </div>
                     </div>
+                    
                 </div>
             </div>
 

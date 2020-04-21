@@ -51,12 +51,12 @@
                         <div class="card-body py-3">
 
                             <div class="row no-gutters align-items-center">
-                                <div class="col"><a href='doi_ngu_sua' class='text-big font-weight-semibold'> <i class="mdi mdi-pin"></i> <?=$row->ten_nv;?> <span class="badge badge-soft-primary">Nổi bật</span> <span class="badge badge-info">Doanh thu cao nhất</span></a></div>
+                                <div class="col"><a href='doi_ngu_sua' class='text-big font-weight-semibold'> <i class="mdi mdi-pin"></i> <?=$row->name;?> <span class="badge badge-soft-primary">Nổi bật</span> <span class="badge badge-info">Doanh thu cao nhất</span></a></div>
                                 <div class="d-none d-md-block col-8">
 
                                     <div class="row no-gutters align-items-center">
                                         <div class="col-1"><?=$row->tuoi?></div>
-                                        <div class="col-2"><?=$row->don_gia;?></div>
+                                        <div class="col-2"><?=$row->price;?></div>
                                         <div class="media col-7 align-items-center">
                                             <div class="avatar">
                                                 <div class="avatar avatar-title rounded-circle">

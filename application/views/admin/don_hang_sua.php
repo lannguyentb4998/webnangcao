@@ -17,7 +17,7 @@
 <meta property="og:image"
       content="https://cdn.dribbble.com/users/180706/screenshots/5424805/the_sceens_-_mobile_perspective_mockup_3_-_by_tranmautritam.jpg"/>
 <meta property="og:site_name" content="atlas "/>
-<title>Quản trị đội ngũ</title>
+<title>Quản trị đơn hàng</title>
 <link rel="icon" type="image/x-icon" href="assets/img/logo.png"/>
 <link rel="icon" href="assets/img/logo.png" type="image/png" sizes="16x16">
 <link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/478ccdc1892151837f9e7163badb055b8a1833a5/crisp/assets/vendor/pace/pace.css'/>
@@ -220,7 +220,7 @@
                 <div class="row">
                     <div class="col-12 text-white p-t-40 p-b-90">
 
-                        <h4 class="">  SỬA THÔNG TIN NHÂN VIÊN
+                        <h4 class="">  SỬA THÔNG TIN ĐƠN HÀNG
                         </h4>
                         <p class="opacity-75 ">
                             Chỉ chỉnh sửa thông tin cần thiết để cập nhật lên hệ thống.
@@ -240,132 +240,36 @@
                     <div class="card m-b-30">
                         <div class="card-header">
                             <h5 class="m-b-0">
-                                 Thông tin cá nhân
+                                 Thông tin đơn hàng
                             </h5>
                             <p class="m-b-0 text-muted">
                                 Yêu cầu nhập chính xác
                             </p>
                         </div>
-                        <form method="POST" action="<?=base_url().'admin/quan_tri_doi_ngu/thuc_hien_sua_doi_ngu';?>">
+                        <form method="POST" action="<?=base_url().'admin/quan_tri_don_hang/thuc_hien_sua_trang_thai';?>">
                         <div class="card-body ">
                             <div class="form-row">
                                 <div class="form-group col-md-12">
-                                    <label for="txtHoTen">Họ và tên</label>
-                                    <input type="text" class="form-control" name="txtHoTen" placeholder="Họ tên" value="<?=$doi_ngu->name;?>">
+                                    <label for="txtTrangThai">Trạng thái</label>
+                                    <input type="text" class="form-control" name="txtTrangThai" placeholder="Trạng thái" value="<?=$don_hang->trang_thai;?>">
                                 </div>
-                                <div class="form-group col-md-6">
-                                    <label for="txtEmail">Email</label>
-                                    <input type="email" class="form-control" name="txtEmail" placeholder="Email" value="<?=$doi_ngu->email;?>">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label for="txtGioiThieu">Giới thiệu</label>
-                                    <input type="text" class="form-control" name="txtGioiThieu" placeholder="Giới thiệu" value="<?=$doi_ngu->gioi_thieu;?>" >
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col m-b-30">
-                                    <label for="txtCMT">CMT/CCCD</label>
-                                    <input type="text" class="form-control" name="txtCMT" placeholder="9 hoặc 12 số" value="<?=$doi_ngu->so_CMT;?>">
-                                </div>
-                                <div class="form-group col m-b-30">
-                                    <label for="txtSoNamKinhNghiem">Số năm kinh nghiệm</label>
-                                    <input type="text" class="form-control" name="txtSoNamKinhNghiem" placeholder="Số năm kinh nghiệm" value="<?=$doi_ngu->so_nam_kinh_nghiem;?>">
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col m-b-30">
-                                    <label for="txtSDT">Số điện thoại</label>
-                                    <input type="text" class="form-control" name="txtSDT" placeholder="SĐT" value="<?=$doi_ngu->SDT;?>">
-                                </div>
-                                <div class="form-group col m-b-30">
-                                    <label for="txtGia">Giá dịch vụ</label>
-                                    <input type="text" class="form-control" name="txtGia" placeholder="Giá dịch vụ" value="<?=$doi_ngu->price;?>">
-
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col m-b-12">
-                                <label for="txtNgaySinh">Ngày sinh</label>
-                                <input type="Date" class="form-control" name="txtNgaySinh" placeholder="Ngày sinh" value="<?=$doi_ngu->ngay_sinh;?>">
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col m-b-30">
-                                    <label for="txtQuan">Quận</label>
-                                    <input type="text" class="form-control" name="txtQuan" placeholder="Quận" value="<?=$doi_ngu->quan;?>">
-                                </div>
-                                <div class="form-group col m-b-30">
-                                    <label for="txtThanhPho">Thành phố</label>
-                                    <input type="text" class="form-control" name="txtThanhPho" placeholder="Thành phố" value="<?=$doi_ngu->thanh_pho;?>">
-
-                                </div>
-                            </div>
+                                
                             <div class="form-group">
-                                <label for="txtDiaChi">Địa chỉ</label>
-                                <input type="text" class="form-control" name="txtDiaChi" placeholder="Số nhà, đường/phố" value="<?=$doi_ngu->dia_chi;?>">
-                            </div>
-                            
-                            <div class="form-group">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck">
-                                    <label class="form-check-label" for="gridCheck">
-                                        Đã nộp đủ giấy tờ công chứng
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <button class="btn btn-warning">Sửa nhân viên</button>
-                                <input name="txtID" type="hidden" value="<?=$doi_ngu->id;?>">
+                                <button class="btn btn-warning">Sửa đơn hàng</button>
+                                <input name="txtID" type="hidden" value="<?=$don_hang->id;?>">
                             </div>
                         </div>
+                                </form>
                     </div>
                     <!--widget card ends-->
                     
                 </div>
-                <div class="col-lg-6">
-                    <!--widget card begin-->
-                    <div class="card m-b-30">
-                        <div class="card-header">
-                            <h5 class="m-b-0">
-                                 Thư viện
-                            </h5>
-                            <p class="m-b-0 text-muted">
-                                Yêu cầu nhập chính xác
-                            </p>
 
-                        </div>
-                        <div class="card-body ">
-                            <div class="form-group" >
-                                <label for="txtAnhMinhHoa">Ảnh minh họa </label>
-                                    <div class="custom-file">
-                                        <input type="file" class="custom-file-input" name="txtAnhMinhHoa" value="<?=$doi_ngu->anh_minh_hoa;?>">
-                                        <label class="custom-file-label" for="txtAnhMinhHoa"></label>
-                                    </div>
-                                </div>
-                            <div class="form-group" >
-                                <label for="txtMatTruoc">Ảnh CMT mặt trước </label>
-                                    <div class="custom-file">
-                                        <input type="file" class="custom-file-input" name="txtMatTruoc" value="<?=$doi_ngu->anh_CMT_mat_truoc;?>">
-                                        <label class="custom-file-label" for="txtMatTruoc"></label>
-                                    </div>
-                                </div> 
-                            <div class="form-group" >
-                                <label for="txtMatSau">Ảnh CMT mặt sau </label>
-                                    <div class="custom-file">
-                                        <input type="file" class="custom-file-input" name="txtMatSau" value="<?=$doi_ngu->anh_CMT_mat_sau;?>">
-                                        <label class="custom-file-label" for="txtMatSau"></label>
-                                    </div>
-                                </div>
-                        </div>
-                    </div>
-                    <!--widget card ends-->
-
-                    </div>
             </div>
 
 
         </div>
-        </form>
+
     </section>
 </main>
 
