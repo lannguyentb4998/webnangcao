@@ -1,7 +1,7 @@
 
-    <!-- ##### Breadcrumb Area Start ##### -->
+
     <div class="breadcrumb-area">
-        <!-- Top Breadcrumb Area -->
+       
         <div class="top-breadcrumb-area bg-img bg-overlay d-flex align-items-center justify-content-center" style="background-image: url(img/bg-img/24.jpg);">
             <h2>ĐỘI NGŨ</h2>
         </div>
@@ -19,21 +19,18 @@
             </div>
         </div>
     </div>
-    <!-- ##### Breadcrumb Area End ##### -->
-
-    <!-- ##### Single Product Details Area Start ##### -->
+    
     <section class="single_product_details_area mb-50">
         <div class="produts-details--content mb-50">
             <div class="container">
                 <div class="row justify-content-between">
-
                     <div class="col-12 col-md-6 col-lg-5">
                         <div class="single_product_thumb">
                             <div id="product_details_slider" class="carousel slide" data-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
                                         <a class="product-img" href="img/bg-img/nv1.jpg" title="Product Image">
-                                        <img class="d-block w-100" src="img/bg-img/nv1.jpg" alt="1">
+                                        <img class="d-block w-100" src="<?=base_url();?>/img/bg-img/<?=$doi_ngu_chi_tiet->anh_minh_hoa;?>" alt="1">
                                         </a>
                                     </div>
                                 </div>
@@ -43,12 +40,12 @@
 
                     <div class="col-12 col-md-6">
                         <div class="single_product_desc">
-                            <h4 class="title">Nguyễn Văn Anh</h4>
-                            <h4 class="price">20000 VNĐ</h4>
+                            <h4 class="title"><?=$doi_ngu_chi_tiet->name;?></h4>
+                            <h4 class="price"><?=$doi_ngu_chi_tiet->price;?> VNĐ</h4>
                             <div class="short_overview">
-                                <p>Siêng năng,trung thưc, có niềm yêu thích cây cảnh và là một nhân viên được khách hàng đánh giá cao.
+                                <p><?=$doi_ngu_chi_tiet->gioi_thieu;?>
                                 </p>
-                                <p>Đã có 5 năm kinh nghiệm </p>
+                                <p>Số năm kinh nghiệm: <?=$doi_ngu_chi_tiet->so_nam_kinh_nghiem;?> </p>
                             </div>
 
                             <div class="cart--area d-flex flex-wrap align-items-center">
@@ -77,7 +74,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="product_details_tab clearfix">
-                        <!-- Tabs -->
+                        
                         <ul class="nav nav-tabs" role="tablist" id="product-details-tab">
                             <li class="nav-item">
                                 <a href="#description" class="nav-link active" data-toggle="tab" role="tab">Môtả</a>
@@ -86,7 +83,7 @@
                                 <a href="#reviews" class="nav-link" data-toggle="tab" role="tab">Reviews <span class="text-muted">(1)</span></a>
                             </li>
                         </ul>
-                        <!-- Tab Content -->
+                        
                         <div class="tab-content">
                             <div role="tabpanel" class="tab-pane fade show active" id="description">
                                 <div class="description_area">
@@ -209,22 +206,15 @@
             </div>
         </div>
     </section>
-    <!-- ##### Single Product Details Area End ##### -->
-
-   
     
-
-    <!-- ##### All Javascript Files ##### -->
-    <!-- jQuery-2.2.4 js -->
     <script src="js/jquery/jquery-2.2.4.min.js"></script>
-    <!-- Popper js -->
+    
     <script src="js/bootstrap/popper.min.js"></script>
-    <!-- Bootstrap js -->
+    
     <script src="js/bootstrap/bootstrap.min.js"></script>
-    <!-- All Plugins js -->
+    
     <script src="js/plugins/plugins.js"></script>
-    <!-- Active js -->
+    
     <script src="js/active.js"></script>
 </body>
 
-</html>

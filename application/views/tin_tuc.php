@@ -37,7 +37,7 @@
                                     <a href="single-post.html"><img style="height: 350px; width: auto" src="<?=base_url();?>/img/bg-img/<?=$row->anh_minh_hoa_1;?>" alt=""></a>
                                 </div>
                                 <div class="post-content">
-                                    <a href="single-post.html" class="post-title">
+                                    <a href="<?=base_url();?>tin_tuc/hien_thi_tin_tuc_chi_tiet/<?=$row->id;?>" class="post-title">
                                         <h5><?=$row->tieu_de?></h5>
                                     </a>
                                     <div class="post-meta">

@@ -351,7 +351,7 @@
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="single-blog-post mb-100">
                         <div class="post-thumbnail mb-30">
-                            <a href="single-post"><img src="../adorablegarden/img/bg-img/6.jpg" alt=""></a>
+                            <a href="single-post"><img src="<?=base_url();?>/img/bg-img/<?=$row->anh_minh_hoa_1;?>" alt=""></a>
                         </div>
                         <div class="post-content">
                             <a href="single-post" class="post-title">
@@ -414,27 +414,28 @@
                         <p>Hãy để lại lời nhắn, chúng tôi sẽ liên hệ với bạn ngay khi có thể.</p>
                     </div>
                     <!-- Contact Form Area -->
+                    <form method="POST" action="<?=base_url().'welcome/thuc_hien_them_moi_phan_hoi';?>">
                     <div class="contact-form-area mb-100">
                         <form action="#" method="post">
                             <div class="row">
-                                <div class="col-12 col-sm-6">
+                                <div class="col-12 col-md-6">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="contact-name" placeholder="Tên của bạn">
+                                        <input type="text" class="form-control" id="contact-name" placeholder="Tên của bạn" name="txtHoTen">
                                     </div>
                                 </div>
-                                <div class="col-12 col-sm-6">
+                                <div class="col-12 col-md-6">
                                     <div class="form-group">
-                                        <input type="email" class="form-control" id="contact-email" placeholder="Email">
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="contact-subject" placeholder="Chủ đề">
+                                        <input type="email" class="form-control" id="contact-email" placeholder="Email" name="txtEmail">
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-group">
-                                        <textarea class="form-control" name="message" id="message" cols="30" rows="10" placeholder="Tin nhắn"></textarea>
+                                        <input type="text" class="form-control" id="contact-subject" placeholder="Chủ đề" name="txtTieuDe">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <textarea class="form-control" name="txtNoiDung" id="message" cols="30" rows="10" placeholder="Lời nhắn"></textarea>
                                     </div>
                                 </div>
                                 <div class="col-12">
@@ -443,8 +444,8 @@
                             </div>
                         </form>
                     </div>
+                    </form>
                 </div>
-
                 <div class="col-12 col-lg-6">
                     <!-- Google Maps -->
                     <div class="map-area mb-100">

@@ -166,7 +166,6 @@
                         <?php foreach ($doi_ngu as $row) {
                          ;?>
                                              
-                        
  
                             <!-- Single Product Area -->
                             <div class="col-12 col-sm-6 col-lg-4">
@@ -181,7 +180,7 @@
                                     </div>
                                     <!-- Product Info -->
                                     <div class="product-info mt-15 text-center">
-                                        <a href="doi_ngu_chi_tiet">
+                                        <a href="<?=base_url();?>doi_ngu/hien_thi_doi_ngu_chi_tiet/<?=$row->id;?>">
                                             <p><?=$row->name?></p>
                                         </a>
                                         <h6><?=$row->price?>VNĐ</h6>

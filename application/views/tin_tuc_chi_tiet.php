@@ -33,55 +33,21 @@
                         <!-- Post Details Area -->
                         <div class="single-post-details-area">
                             <div class="post-content">
-                                <h4 class="post-title">Cây thẻ bài hồng – ý nghĩa, công dụng và cách chăm sóc cho ra hoa đẹp</h4>
+                                <h4 class="post-title"><?=$tin_tuc_chi_tiet->tieu_de;?></h4>
                                 <div class="post-meta mb-30">
-                                    <a href="#"><i class="fa fa-clock-o" aria-hidden="true"></i> 20 Jun 2018</a>
-                                    <a href="#"><i class="fa fa-user" aria-hidden="true"></i>Nắng</a>
+                                    <a href="#"><i class="fa fa-clock-o" aria-hidden="true"></i><?=$tin_tuc_chi_tiet->ngay_tao;?></a>
+                                    <a href="#"><i class="fa fa-user" aria-hidden="true"></i><?=$tin_tuc_chi_tiet->tac_gia;?></a>
                                 </div>
                                 <div class="post-thumbnail mb-30" style="text-align: center;">
-                                    <img src="img/bg-img/cay_the_bai_hong.jpg" alt="" >
+                                    <img src="<?=base_url();?>/img/bg-img/<?=$tin_tuc_chi_tiet->anh_minh_hoa_1;?>" alt="" >
                                 </div>
-                                <p style="text-align: justify;">Bạn đã bao giờ nghe đến cái tên thẻ bài hồng chưa? Cây thẻ bài hồng là một loại cây mang một vẻ đẹp rất riêng, rất lạ, gây thương nhớ đối với bao ánh mắt của những người yêu cây. Không chỉ mang một vẻ đẹp độc đáo, loài cây này còn mang những ý nghĩa và công dụng to lớn.</p>
+                                <p style="text-align: justify;"><?=$tin_tuc_chi_tiet->noi_dung;?></p>
 
-                                <p style="text-align: justify;">Để có thể tận dụng triệt để những vẻ đẹp mà nó mang lại, trước tiên, bạn cần chăm sóc cây cho đúng cách. Vì vậy, bài viết hôm nay, chúng tôi sẽ giới thiệu cho bạn kĩ thuật chăm sóc cây thẻ bài hồng phát triển tốt tươi.</p>
-                                <div class="row mb-30">
-                                    <div class="col-lg-7">
-                                        <p style="text-align: justify;">Cây thẻ bài hồng có tên khoa học là Tillandsia cyanea, thuộc họ Bromeliaceae, là loài thực vật có hoa lâu năm. Vì hoa của cây có hình dáng giống chiếc lệnh bài của quan lại thời phong kiến nên người Việt ta gọi nó bằng cái tên khác là cây lệnh bài.</p>
-
-                                        <p style="text-align: justify;">Cây thẻ bài hồng có nguồn gốc từ những khu rừng mưa nhiệt đới xích đạo, vùng núi và sa mạc ở châu Mỹ. Nó được trồng phổ biến và vô cùng rộng rãi ở các nước như Mỹ, Mexico, Caribbean, Argentina,…</p>
-
-                                        <p style="text-align: justify;">Cây thẻ bài hồng được biết đến như một loài cây phong thủy. Cả cây thẻ bài hồng toát lên vẻ đẹp lạ lùng, hiếm có, sang trọng , quý phái nhưng cũng rất giản dị. Nó làm cho người ta tò mò muốn sở hữu.</p>
-
-                                        <p style="text-align: justify;">Vẻ đẹp này được làm nên bởi những chiếc lá dát những hạt kim tuyến bạc nhỏ mỏng mịn. la ánh lên những tia long lanh dưới ánh mặt trời. Những chiếc lá dài, hẹp, cứng và có răng cưa vô cùng đẹp mắt.</p>
-                                    </div>
-                                    <div class="col-lg-5">
-                                        <img src="img/bg-img/cay_the_bai_hong_1.jpg" alt="">
-                                    </div>
-                                </div>
-                                <p style="text-align: justify;">Cây thẻ bài hồng thích nghi rất tốt đối với khí hậu nước ta nên người ta có thể trồng nó trong nhiều dạng môi trường và chăm sóc nó một cách dễ dàng. Chính vì vậy, nó là loài cây vô cùng được ưa chuộng để trồng làm cảnh ở Việt nam ngày nay.</p>
                                 
-                                <h4>Cách chăm sóc cây thẻ bài hồng</h4>
-                                <p style="text-align: justify;">Cây thẻ bài hồng là một loài cây dễ thích nghi và vô cùng dễ chăm sóc</p>
-
-                                <h5>Đặc tính của cây thẻ bài hồng</h5>
-                                <p style="text-align: justify;">Vì đây là loài cây có xuất xứ từ vùng nhiệt đới và những vùng sa mạc ở châu Mỹ. Vì thế, nó có thể chịu hạn, sinh trưởng và phát triển tốt trong nhà, trong phòng, những nơi thiếu ánh sáng.</p>
-
-                                <h6>Chọn chậu:</h6>
-                                <p style="text-align: justify;">Nên chọn chậu phù hợp với cây. Vì đây là loài cây nhỏ, thích hợp để bàn vì vậy, bạn nên chọn chậu có kích thước nhỏ để phù hợp với thẩm mỹ.</p>
-
-                                <h6>Về đất:</h6>
-                                <p style="text-align: justify;">Vì là loài cây có thể sống sót trong môi trường sa mạc nên nó có thể sống và phát triển dưới mọi loại đất. Tuy nhiên để cây sinh trưởng và phát triển một cách tốt nhất, bạn nên chọn những loại đất tơi xốp, giàu dinh dưỡng và có khả năng thoát nước cao.</p>
-
-                                <p style="text-align: justify;">Sau khi chọn đất và chậu xong, bạn đi đến tiến hành trồng cây. Rất đơn giản, bạn chỉ cần cho đất bằng ½ chậu, sau đó đặt cây xuống và lấp phần đất còn lại vào. Sau đó, bạn nên tưới đẫm nước, đủ ẩm để cây có thể duy trì được sụ tươi tốt trong quá trình bén rễ.</p>
-
-                                <h6>Cách chăm sóc cây thẻ bài hồng</h6>
-                                <p style="text-align: justify;">Rất đơn giản để chăm sóc loài cây này. Bạn chỉ cần chú ý đến việc tưới nước cho cây. Không nên tưới nhiều quá, cây sẽ bị úng và thối rễ, cũng không nên tưới ít quá cây sẽ trông thiếu sức sống.</p>
-
-                                <p style="text-align: justify;">Bạn nên tưới đủ nước cho cây để cây có thể phát triển tự nhiên nhất. Tốt nhất nên tưới cây 3 ngày 1 lần để đảm bảo quá trình phát triển.</p>
-
-                                <p style="text-align: justify;">Nên đặt cây ở nơi thông thoáng, thêm vào đó bạn cũng nên dùng kéo cắt đi những lá khô héo để tránh làm ảnh hưởng đến sự sinh trưởng và phát triển của những lá khác.</p>
-
-                                <p style="text-align: justify;">Nếu chăm sóc cây tươi tốt, nó sẽ đem đến cho bạn những ý nghĩa và công dụng to lớn.</p>
+                                    <div class="col-lg-5">
+                                        <img src="<?=base_url();?>/img/bg-img/<?=$tin_tuc_chi_tiet->anh_minh_hoa_2;?>" alt="">
+                                    </div>
+                                </div>
                             </div>
                         </div>
 

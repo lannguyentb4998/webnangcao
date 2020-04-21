@@ -1,5 +1,5 @@
 <!-- ##### Footer Area Start ##### -->
-    <footer class="footer-area bg-img" style="background-image: url(../adorablegarden/img/bg-img/3.jpg);">
+    <footer class="footer-area bg-img" style="background-image: url(<?=base_url();?>img/bg-img/3.jpg);">
         <!-- Main Footer Area -->
         <div class="main-footer-area">
             <div class="container">
@@ -9,7 +9,7 @@
                     <div class="col-12 col-sm-6 col-lg-3">
                         <div class="single-footer-widget">
                             <div class="footer-logo mb-30">
-                                <a href="#"><img src="../adorablegarden/img/core-img/logo.jpg" alt=""></a>
+                                <a href="#"><img src="<?=base_url();?>img/core-img/logo.jpg" alt=""></a>
                             </div>
                             <p>Hãy cùng tô xanh cuộc sống của bạn và gia đình.</p>
                             <div class="social-info">
@@ -118,3 +118,4 @@
         </div>
     </footer>
     <!-- ##### Footer Area End ##### -->
+    </html>
