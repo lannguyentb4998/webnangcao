@@ -43,13 +43,14 @@ class Quan_tri_phan_hoi extends CI_Controller {
 		$this->load->database();
 
 		$this->load->model('phan_hoi');
-
-		$data['phan_hoi'] = $this->phan_hoi->lay_phan_hoi();
-
-		// Lấy ra ID của tin tức cần xóa
 		$id = $this->uri->segment(4);
 
-		$this->load->view('admin/phan_hoi_xem',$id,$data);
+		$data['phan_hoi'] = $this->phan_hoi->lay_phan_hoi_theo_ID($id);
+
+		// Lấy ra ID của tin tức cần xóa
+		
+
+		$this->load->view('admin/phan_hoi_xem',$data);
 	}
 
 	public function xoa_phan_hoi()

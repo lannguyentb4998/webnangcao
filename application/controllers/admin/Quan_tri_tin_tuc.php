@@ -23,6 +23,7 @@ class Quan_tri_tin_tuc extends CI_Controller {
 		$data['tin_tuc'] = $this->m_tin_tuc->lay_tin_tuc();
 
 		$this->load->view('admin/quan_tri_tin_tuc', $data);
+
 	}
 
 	public function them_moi_tin_tuc()
