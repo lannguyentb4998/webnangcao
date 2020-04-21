@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 09, 2020 at 06:09 PM
+-- Generation Time: Apr 21, 2020 at 03:27 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
@@ -91,14 +91,16 @@ CREATE TABLE `tbl_doi_ngu` (
 --
 
 INSERT INTO `tbl_doi_ngu` (`id`, `name`, `ngay_sinh`, `so_CMT`, `so_nam_kinh_nghiem`, `gioi_thieu`, `email`, `SDT`, `price`, `anh_minh_hoa`, `anh_CMT_mat_truoc`, `anh_CMT_mat_sau`, `dich_vu`, `dia_chi`, `quan`, `thanh_pho`, `ngay_tao`, `nguoi_tao`, `ngay_sua`, `nguoi_sua`) VALUES
-(1, 'Lan Nguyen', '0000-00-00 00:00:00', 0, 2, 'Chuyên gia chăm sóc cây cảnh mini đến từ...', '', 0, 50000, '13.jpg', '', '', '', '', '', '', '2020-03-22 13:23:53', 'Lan Nguyen', NULL, NULL),
+(1, 'Lan Nguyen', '2010-01-19 00:00:00', 0, 2, 'Chuyên gia chăm sóc cây cảnh mini đến từ...', '', 0, 50000, '13.jpg', '', '', '', '', '', '', '2020-03-22 13:23:53', 'Lan Nguyen', NULL, NULL),
 (2, 'Trần Dần', '0000-00-00 00:00:00', 0, 15, 'Với niềm đam mê chăm sóc cây trồng từ khi còn bé, tôi luôn tin tưởng...', '', 0, 70000, '15.jpg', '', '', '', '', '', '', '2020-03-22 13:23:53', 'Chu Hue Man', NULL, NULL),
 (3, 'Trần Trung Hiếu', '0000-00-00 00:00:00', 0, 5, 'Tôi tự hào là một trong những chuyên gia chăm sóc tư vấn cây cảnh có mắt thẩm mỹ...', '', 0, 60000, '29.jpg', '', '', '', '', '', '', '2020-03-22 13:25:51', 'Hoang Ngan', NULL, NULL),
 (4, 'Nguyễn Trà My', '0000-00-00 00:00:00', 0, 1, '', '', 0, 1, '37.jpg', '', '', '', '', '', '', '2020-03-22 13:25:51', 'Lan Nguyen', NULL, NULL),
 (3000, 'Nguyễn Thị Linh', '0000-00-00 00:00:00', 0, 10, 'Nhân viên lành nghề', '', 0, 30000, 'team2.jpg', '', '', '', '', '', '', '2015-03-20 00:00:00', 'admin', '2020-03-02 00:00:00', 'admin'),
 (3001, 'Tô Hoàng Linh', '0000-00-00 00:00:00', 0, 5, 'Nhân viên lành nghề', '', 0, 30000, 'team4.jpg', '', '', '', '', '', '', '2015-03-20 00:00:00', 'admin', '2020-03-02 00:00:00', 'admin'),
 (3002, 'Nguyễn Văn Minh', '0000-00-00 00:00:00', 0, 5, 'Nhân viên lành nghề', '', 0, 30000, '38.jpg', '', '', '', '', '', '', '2015-03-20 00:00:00', 'admin', '2020-03-02 00:00:00', 'admin'),
-(3003, 'Đào Minh Anh', '0000-00-00 00:00:00', 0, 1, 'Nhân viên lành nghề', '', 0, 25000, 'team7.jpg', '', '', '', '', '', '', '2015-03-20 00:00:00', 'admin', '2020-03-02 00:00:00', 'admin');
+(3003, 'Đào Minh Anh', '0000-00-00 00:00:00', 0, 1, 'Nhân viên lành nghề', '', 0, 25000, 'team7.jpg', '', '', '', '', '', '', '2015-03-20 00:00:00', 'admin', '2020-03-02 00:00:00', 'admin'),
+(3007, 'dafd', '1998-07-16 00:00:00', 3424324, 4, 'fdfas', 'qwfasdfsa@gmail.com', 341434, 343243, '43.png', '', '', '', 'ewrewr', 'fdf', 'dfd', '2020-04-12 13:12:42', NULL, NULL, NULL),
+(3008, 'vxvxc', '0000-00-00 00:00:00', 3424324, 1, 'dfsd', 'nhn6298@gmail.com', 341434, 50000, '', '', '', '', '', '', '', '2020-04-15 00:27:17', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -109,20 +111,27 @@ INSERT INTO `tbl_doi_ngu` (`id`, `name`, `ngay_sinh`, `so_CMT`, `so_nam_kinh_ngh
 CREATE TABLE `tbl_don_hang` (
   `id` int(11) NOT NULL,
   `id_kh` int(11) NOT NULL,
-  `ngay_tao` timestamp NOT NULL DEFAULT current_timestamp()
+  `ngay_tao` timestamp NOT NULL DEFAULT current_timestamp(),
+  `trang_thai` varchar(100) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `tbl_don_hang`
 --
 
-INSERT INTO `tbl_don_hang` (`id`, `id_kh`, `ngay_tao`) VALUES
-(1, 4, '2020-03-22 13:29:40'),
-(2, 2, '2020-03-22 13:29:40'),
-(5, 1016, '2020-04-08 17:00:00'),
-(6, 1018, '2020-04-08 17:00:00'),
-(7, 1019, '2020-04-08 17:00:00'),
-(8, 1021, '2020-04-08 17:00:00');
+INSERT INTO `tbl_don_hang` (`id`, `id_kh`, `ngay_tao`, `trang_thai`) VALUES
+(1, 4, '2020-03-22 13:29:40', 'Đã thanh toán'),
+(2, 2, '2020-03-22 13:29:40', 'Đã thanh toán'),
+(5, 1016, '2020-04-08 17:00:00', 'Đã thanh toán'),
+(6, 1018, '2020-04-08 17:00:00', 'Chưa thanh toán'),
+(7, 1019, '2020-04-08 17:00:00', 'Chưa thanh toán'),
+(8, 1021, '2020-04-08 17:00:00', 'Đã thanh toán'),
+(14, 1027, '2020-04-13 17:00:00', 'Chưa thanh toán'),
+(16, 1, '2020-04-13 17:00:00', 'Chưa thanh toán'),
+(19, 1, '2020-04-13 17:00:00', 'Đã thanh toán'),
+(20, 1, '2020-04-13 17:00:00', 'Đã thanh toán'),
+(21, 1, '2020-04-13 17:00:00', 'Chưa thanh toán'),
+(22, 1, '2020-04-14 17:00:00', 'Đã thanh toán');
 
 -- --------------------------------------------------------
 
@@ -143,8 +152,15 @@ CREATE TABLE `tbl_don_hang_chi_tiet` (
 --
 
 INSERT INTO `tbl_don_hang_chi_tiet` (`id`, `ma_don`, `id_nv`, `qty`, `price`) VALUES
-(2, '6', '', '1', '70000'),
-(3, '8', '', '1', '60000');
+(1, '14', '3000', '1', '50000'),
+(2, '6', '3001', '1', '70000'),
+(3, '8', '3001', '1', '60000'),
+(4, '19', '1', '1', '50000'),
+(5, '20', '1', '1', '50000'),
+(6, '20', '2', '1', '70000'),
+(7, '21', '2', '1', '70000'),
+(8, '21', '3000', '1', '30000'),
+(9, '22', '1', '1', '50000');
 
 -- --------------------------------------------------------
 
@@ -188,7 +204,11 @@ INSERT INTO `tbl_khach_hang` (`id`, `ten_kh`, `thanh_pho`, `quan`, `email`, `SDT
 (1016, 'dsfsd', NULL, 'fsdfd', 'fdhsjfdsfhj@gmail.com', 0, '2020-04-09 16:04:40', NULL, NULL, NULL, NULL, '0000-00-00', ''),
 (1018, 'dsfsd', NULL, 'fsdfd', 'vhfjvkj@gmail.com', 0, '2020-04-09 16:05:17', NULL, NULL, NULL, NULL, '0000-00-00', ''),
 (1019, 'dsfsd', NULL, 'fsdfd', 'trangkyu208@gmail.com', 0, '2020-04-09 16:06:21', NULL, NULL, NULL, NULL, '0000-00-00', ''),
-(1021, 'dsfsd', NULL, 'fsdfd', 'dfdsfdf@gmail.com', 0, '2020-04-09 16:06:55', NULL, NULL, NULL, NULL, '0000-00-00', '');
+(1021, 'dsfsd', NULL, 'fsdfd', 'dfdsfdf@gmail.com', 0, '2020-04-09 16:06:55', NULL, NULL, NULL, NULL, '0000-00-00', ''),
+(1023, 'dsfsd', NULL, 'fsdfd', '19A4040099@bav.edu.vn', 0, '2020-04-13 03:47:29', NULL, NULL, NULL, NULL, '0000-00-00', ''),
+(1025, 'dsfsd', NULL, 'fsdfd', '19A4040079@bav.edu.vn', 0, '2020-04-13 05:00:23', NULL, NULL, NULL, NULL, '0000-00-00', ''),
+(1026, 'Nguyễn Hoàng Ngân', NULL, 'fsdfd', 'fdfjdk@gmail.com', 0, '2020-04-14 02:38:32', NULL, NULL, NULL, NULL, '0000-00-00', ''),
+(1027, 'Nguyễn Hoàng Ngân', NULL, 'fsdfd', '1234@gmail.com', 0, '2020-04-14 07:12:03', NULL, NULL, NULL, NULL, '0000-00-00', '');
 
 -- --------------------------------------------------------
 
@@ -240,7 +260,9 @@ CREATE TABLE `tbl_phan_hoi` (
 INSERT INTO `tbl_phan_hoi` (`id`, `ho_ten`, `noi_dung_phan_hoi`, `tai_khoan`, `thoi_gian_phan_hoi`, `tieu_de`) VALUES
 (5, 'dsfds', 'fgfgfd', 'fdaf@gmail.com', '2020-04-07 10:02:08', 'dfgfdg'),
 (6, '5454', 'gfgfgf', 'dfdfds@gmail.com', '2020-04-08 03:29:58', 'fdsafd'),
-(7, 'bbsdfd', 'sdafd', 'fdaf@gmail.com', '2020-04-08 03:31:53', 'dfafd');
+(7, 'bbsdfd', 'sdafd', 'fdaf@gmail.com', '2020-04-08 03:31:53', 'dfafd'),
+(9, 'fdfdfđ', 'dsfds', 'manchu@gmail.com', '2020-04-18 08:15:00', 'fdsfd'),
+(10, 'vbvmnn', 'fdfhdsjbndshvkds,bvnbdsvdvbsbvvbjklfnvx,vbxnv,cxbvk,cx', 'nhn6298@gmail.com', '2020-04-19 07:34:01', 'fdsfd');
 
 -- --------------------------------------------------------
 
@@ -301,8 +323,7 @@ ALTER TABLE `tbl_doi_ngu`
 -- Indexes for table `tbl_don_hang`
 --
 ALTER TABLE `tbl_don_hang`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `id_kh` (`id_kh`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `tbl_don_hang_chi_tiet`
@@ -352,25 +373,25 @@ ALTER TABLE `tbl_dich_vu`
 -- AUTO_INCREMENT for table `tbl_doi_ngu`
 --
 ALTER TABLE `tbl_doi_ngu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3007;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3009;
 
 --
 -- AUTO_INCREMENT for table `tbl_don_hang`
 --
 ALTER TABLE `tbl_don_hang`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `tbl_don_hang_chi_tiet`
 --
 ALTER TABLE `tbl_don_hang_chi_tiet`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `tbl_khach_hang`
 --
 ALTER TABLE `tbl_khach_hang`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1022;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1028;
 
 --
 -- AUTO_INCREMENT for table `tbl_nguoi_dung`
@@ -382,7 +403,7 @@ ALTER TABLE `tbl_nguoi_dung`
 -- AUTO_INCREMENT for table `tbl_phan_hoi`
 --
 ALTER TABLE `tbl_phan_hoi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `tbl_tin_tuc`
@@ -399,12 +420,6 @@ ALTER TABLE `tbl_tin_tuc`
 --
 ALTER TABLE `tbl_binh_luan`
   ADD CONSTRAINT `FK_tbl_binh_luan_tbl_khach_hang` FOREIGN KEY (`id_khach_hang`) REFERENCES `tbl_khach_hang` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE;
-
---
--- Constraints for table `tbl_don_hang`
---
-ALTER TABLE `tbl_don_hang`
-  ADD CONSTRAINT `FK_tbl_don_hang_tbl_khach_hang` FOREIGN KEY (`id_kh`) REFERENCES `tbl_khach_hang` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE;
 
 --
 -- Constraints for table `tbl_nguoi_dung`
