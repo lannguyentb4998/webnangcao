@@ -87,8 +87,22 @@ class Gio_hang extends CI_Controller {
                 'SDT'         => $this->input->post('SDT'),
                 'quan'       => $this->input->post('quan')
             );
-            $cust_id = $this->shopping_model->insert_thanhtoan($khach_hang);
-            
+            $email = $_POST['email'];
+
+            if ($this->shopping_model->kiem_tra_du_lieu($email)!=0) {
+                $query = $this->db->query("
+                    SELECT id 
+                    FROM tbl_khach_hang
+                    WHERE email = '".$email."'");
+                $cust_id = $query->result();
+                foreach ($cust_id as $row);
+                $cust_id= $row->id;
+                                 
+            }
+            else{
+                $cust_id = $this->shopping_model->insert_thanhtoan($khach_hang);
+            }
+
             $order = array(
                 'ngay_tao' => date('Y-m-d'),
                 'id_kh' => $cust_id
@@ -100,7 +114,7 @@ class Gio_hang extends CI_Controller {
                 foreach ($cart as $item):
                     $order_detail = array(
                     'ma_don' => $ord_id,
-                    'id' => $item['id'],
+                    'id_nv' => $item['id'],
                     'qty' => $item['qty'],
                     'price' => $item['price']
                 );  

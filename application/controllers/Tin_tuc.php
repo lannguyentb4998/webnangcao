@@ -44,4 +44,21 @@ class Tin_tuc extends CI_Controller {
 		$this->load->view('tin_tuc',$data);
 		$this->load->view('footer');
 	}
+
+	public function hien_thi_tin_tuc_chi_tiet()
+    {
+    	$id = $this->uri->segment(3);
+    	$data['tin_tuc_chi_tiet'] = $this->m_tin_tuc->lay_tin_tuc_theo_ID($id);
+    	$query1 = $this->db->query("
+			SELECT *
+			FROM tbl_doi_ngu
+			ORDER BY ngay_tao DESC limit 3
+		");
+
+		$data['nhan_vien_moi'] = $query1->result();
+
+		$this->load->view('menu');
+		$this->load->view('tin_tuc_chi_tiet', $data);
+		$this->load->view('footer');
+    }
 }

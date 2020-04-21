@@ -53,5 +53,21 @@ class Doi_ngu extends CI_Controller {
         redirect(base_url().'gio_hang');
         }
 
+    public function hien_thi_doi_ngu_chi_tiet()
+    {
+    	$id = $this->uri->segment(3);
+    	$data['doi_ngu_chi_tiet'] = $this->nhan_vien->lay_doi_ngu_theo_ID($id);
+    	$query1 = $this->db->query("
+			SELECT *
+			FROM tbl_doi_ngu
+			ORDER BY ngay_tao DESC limit 3
+		");
+
+		$data['nhan_vien_moi'] = $query1->result();
+
+		$this->load->view('menu');
+		$this->load->view('doi_ngu_chi_tiet', $data);
+		$this->load->view('footer');
+    }
 
 }
