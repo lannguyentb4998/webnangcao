@@ -11,6 +11,19 @@ Class phan_hoi extends CI_Model {
 		//Trả kết quả truy vấn dữ liệu
 		return $query->result();
 	}
+	public function lay_phan_hoi_theo_ID($id)
+        {
+			// Viết câu lệnh truy vấn SQL lấy các tin tức sự kiện (có mã loai_tin_id)
+			$query = $this->db->query("
+				SELECT *
+				FROM tbl_phan_hoi
+				WHERE id='".$id."'
+
+			");
+
+			// Trả kết quả truy vấn dữ liệu
+	        return  $query->row();
+        }	
 
 	public function xoa_phan_hoi($id)
 	{

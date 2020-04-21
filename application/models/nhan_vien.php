@@ -4,7 +4,7 @@ Class nhan_vien extends CI_Model {
 	{
 		//Viết câu lệnh truy vấn SQL
 		$query = $this->db->query("
-			SELECT  id,name, (YEAR(CURDATE()) - YEAR(ngay_sinh)) - (RIGHT(CURDATE(), 5) < RIGHT(ngay_sinh, 5)) as tuoi, price, gioi_thieu, so_nam_kinh_nghiem, anh_minh_hoa
+			SELECT  price, gioi_thieu, so_nam_kinh_nghiem, anh_minh_hoa,id,name, (YEAR(CURDATE()) - YEAR(ngay_sinh)) - (RIGHT(CURDATE(), 5) < RIGHT(ngay_sinh, 5)) as tuoi
 			FROM tbl_doi_ngu
 		");
 		
@@ -47,7 +47,7 @@ Class nhan_vien extends CI_Model {
 
 			// Đẩy dữ liệu này vào CSDL
 			$data = array(
-				'ten_nv' => $ho_ten,
+				'name' => $ho_ten,
 				'email' => $email,
 				'SDT' => $SDT,
 				'ngay_sinh' => $ngaysinh,
@@ -57,7 +57,7 @@ Class nhan_vien extends CI_Model {
 				'thanh_pho' => $thanhpho,
 				'so_CMT' => $cmt,
 				'so_nam_kinh_nghiem' => $sonamkinhnghiem,
-				'don_gia' => $gia,
+				'price' => $gia,
 				'dia_chi' => $diachi,
 				'anh_CMT_mat_truoc' => $mattruoc,
 				'anh_CMT_mat_sau' => $matsau
@@ -91,7 +91,7 @@ Class nhan_vien extends CI_Model {
 
 			// Đẩy dữ liệu này vào CSDL
 			$data = array(
-				'ten_nv' => $ho_ten,
+				'name' => $ho_ten,
 				'email' => $email,
 				'SDT' => $SDT,
 				'ngay_sinh' => $ngaysinh,
@@ -101,7 +101,7 @@ Class nhan_vien extends CI_Model {
 				'thanh_pho' => $thanhpho,
 				'so_CMT' => $cmt,
 				'so_nam_kinh_nghiem' => $sonamkinhnghiem,
-				'don_gia' => $gia,
+				'price' => $gia,
 				'dia_chi' => $diachi,
 				'anh_CMT_mat_truoc' => $mattruoc,
 				'anh_CMT_mat_sau' => $matsau
