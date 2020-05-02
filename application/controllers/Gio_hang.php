@@ -10,6 +10,7 @@ class Gio_hang extends CI_Controller {
             $this->load->model('shopping_model');
             $this->load->helper('form');
             $this->load->helper('url');
+            $this->load->helper('date');
             $this->load->database();
         }
 
@@ -121,6 +122,52 @@ class Gio_hang extends CI_Controller {
                 $cust_id = $this->shopping_model->insert_order_detail($order_detail);
                 endforeach;
             endif;
+
+            $ngay_tao= date('d-m-Y');
+        
+            if(isset($_POST['email']))
+            {
+                $to_id = $_POST['email'];
+                $message = "<h2>Đơn đặt hàng của bạn đã được xác nhận.</h2>
+                            <p>Kính gửi quý khách hàng!</p>
+                            <p>Adorable Garden xin trân trọng thông báo:</p>
+                            <p>Đơn đặt hàng số: ".$ord_id." của khách hàng đặt ngày: ".$ngay_tao." đã được xác nhận.</p>
+                            <p>Chúng tôi sẽ kiểm tra tình trạng nhân viên trong đơn hàng và báo lại quý khách trong thời gian sớm nhất.</p>
+                            <p>Xin trân trọng cảm ơn.</p>";
+                $subject = "Confirm the order. ".$ord_id."";
+
+                $this->load->library('phpmailer_lib');
+
+                $mail = $this->phpmailer_lib->load();
+
+                $mail->isSMTP();
+                $mail->Host = 'smtp.gmail.com';
+                $mail->SMTPAuth = true;
+                $mail->Username = 'gardenadorable@gmail.com';
+                $mail->Password = 'adorablegarden@123';
+                $mail->SMTPSecure = 'tls';
+                $mail->Port = 587;
+
+                $mail->setFrom('gardenadorable@gmail.com','Adorable Garden');
+                $mail->addReplyTo('gardenadorable@gmail.com','Adorable Garden');
+
+                $mail->addAddress($to_id);
+
+                $mail->addCC('cc@example.com');
+                $mail->addBCC('bcc@example.com');
+
+
+                $mail->Subject= $subject;
+
+                $mail->isHTML(true);
+
+
+                $mail->Body = $message;
+
+                $mail->send();
+
+                }
+
             echo "<script type='text/javascript'>
 			window.alert('Bạn đã đặt hàng. Chúng tôi sẽ liên lạc lại sớm cho bạn.');
 			</script>";

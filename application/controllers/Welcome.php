@@ -19,8 +19,9 @@ class Welcome extends CI_Controller {
 		");
 
 		$query1 = $this->db->query("
-			SELECT *
-			FROM tbl_phan_hoi
+			SELECT tbl_phan_hoi.tai_khoan as email, tbl_khach_hang.anh_minh_hoa as anh_minh_hoa, tbl_phan_hoi.id as id, tbl_phan_hoi.tieu_de as tieu_de, tbl_phan_hoi.thoi_gian_phan_hoi as thoi_gian_phan_hoi, tbl_phan_hoi.ho_ten as ho_ten, tbl_phan_hoi.noi_dung_phan_hoi as noi_dung_phan_hoi
+			FROM tbl_phan_hoi,tbl_khach_hang
+			WHERE tbl_phan_hoi.tai_khoan = tbl_khach_hang.email
 			ORDER BY thoi_gian_phan_hoi DESC 
 
 		");
