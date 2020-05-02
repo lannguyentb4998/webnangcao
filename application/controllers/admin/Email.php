@@ -35,11 +35,11 @@ class Email extends CI_Controller
         $mail->addBCC('bcc@example.com');
 
 
-		$mail->Subject='Send Email via SMTP using PHPMailer in CodeIgniter';
+		$mail->Subject='Xác nhận đơn hàng';
 
 		$mail->isHTML(true);
 
-		$mailConten = "hi";
+		$mailConten = "<h1>Cảm ơn bạn đã đặt hàng </h1>";
 
 		$mail->Body = $mailConten;
 

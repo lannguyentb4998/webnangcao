@@ -3,7 +3,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Quan_tri_don_hang extends CI_Controller {
 
-	
+	 public function __construct(){
+		parent::__construct();
+		ob_start();
+		$this->load->helper(array('form', 'url'));
+		$this->load->model('don_hang');
+		$this->load->library('pagination');
+	}
+
+
 	public function index()
 	{
 		//kết nối đến CSDL
@@ -20,7 +28,56 @@ class Quan_tri_don_hang extends CI_Controller {
 		$this->load->view('admin/header',$data);
 
 		//Lấy kết quả truy vấn dữ liệu
-		$data['don_hang'] = $this->don_hang->lay_don_hang();
+
+		$data['da_thanh_toan']= $this->don_hang->da_thanh_toan();
+
+		$data['chua_thanh_toan']= $this->don_hang->chua_thanh_toan();
+
+		$this->load->view('admin/quan_tri_don_hang', $data);
+	}
+
+	public function da_thanh_toan()
+	{
+		//kết nối đến CSDL
+		$this->load->database();
+
+		$this->load->helper('url');
+
+		//kết nối đến models
+		$this->load->model('don_hang');
+		
+		
+		$data['tieu_de'] ="Quản trị đơn hàng";
+
+		$this->load->view('admin/header',$data);
+
+		//Lấy kết quả truy vấn dữ liệu
+		$data['don_hang'] = $this->don_hang->lay_don_hang_da_thanh_toan();
+
+		$data['da_thanh_toan']= $this->don_hang->da_thanh_toan();
+
+		$data['chua_thanh_toan']= $this->don_hang->chua_thanh_toan();
+
+		$this->load->view('admin/quan_tri_don_hang', $data);
+	}
+
+	public function chua_thanh_toan()
+	{
+		//kết nối đến CSDL
+		$this->load->database();
+
+		$this->load->helper('url');
+
+		//kết nối đến models
+		$this->load->model('don_hang');
+		
+		
+		$data['tieu_de'] ="Quản trị đơn hàng";
+
+		$this->load->view('admin/header',$data);
+
+		//Lấy kết quả truy vấn dữ liệu
+		$data['don_hang'] = $this->don_hang->lay_don_hang_chua_thanh_toan();
 
 		$data['da_thanh_toan']= $this->don_hang->da_thanh_toan();
 
@@ -82,4 +139,5 @@ class Quan_tri_don_hang extends CI_Controller {
 
     }
 
+   
 }

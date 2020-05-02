@@ -71,4 +71,28 @@ class Dang_nhap extends CI_Controller {
 		// Chuyển người dùng ra trang đăng nhập
 		redirect(base_url()."admin/dang_nhap");
 	}
+
+	public function quen_mk()
+	{
+		// Load thư viện URL
+		$this->load->helper('url');
+	
+		// Hiển thị dữ liệu ra view
+		$this->load->view('admin/doi_mat_khau');
+	}
+
+	public function thuc_hien_doi_mat_khau()
+	{
+		// Kết nối đến CSDL
+		$this->load->database();
+
+		// Load thư viện URL
+		$this->load->helper('url');
+
+		// Thên mới tin tức thông qua qua MODEL
+		$this->nguoi_dung->doi_mat_khau();
+	
+		// Cho các bạn quay về trang Quản trị tin tức
+		redirect(base_url()."admin/dang_nhap");
+	}
 }
