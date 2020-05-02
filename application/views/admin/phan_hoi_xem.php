@@ -262,7 +262,7 @@
                                     </div>
                                     <hr>
                                     
-                                        <a class="btn btn-white"  href="<?=base_url();?>admin/quan_tri_phan_hoi/phan_hoi_tra_loi" >
+                                        <a class="btn btn-white"  href="<?=base_url();?>admin/quan_tri_phan_hoi/phan_hoi_tra_loi/<?=$phan_hoi->id;?>" >
                                             <i class="mdi mdi-reply"></i> Trả lời
                                         </a>
                                         

@@ -65,13 +65,17 @@
 
                                     <div class="col-md-6 text-right my-auto">
                                         <div class="btn-group" role="group" aria-label="Basic example">
-                                            <button type="button" class="btn btn-white shadow-none js-datepicker"><i
-                                                        class="mdi mdi-calendar"></i> Ngày đặt
-                                            </button>
+                                            <form action="<?php echo base_url('admin/quan_tri_don_hang/index') ?>" method="POST">
+                                            <button type="submit" class="btn btn-white shadow-none" >Tất cả</button>
+                                            </form>
 
-                                            <button type="button" class="btn btn-white shadow-none">Tất cả</button>
-                                            <button type="button" class="btn btn-white shadow-none">Đã thanh toán</button>
-                                            <button type="button" class="btn btn-white shadow-none">Chưa thanh toán</button>
+                                            <form action="<?php echo base_url('admin/quan_tri_don_hang/da_thanh_toan') ?>" method="POST">
+                                            <button type="submit" class="btn btn-white shadow-none" >Đã thanh toán</button>
+                                            </form>
+                                            
+                                            <form action="<?php echo base_url('admin/quan_tri_don_hang/chua_thanh_toan') ?>" method="POST">
+                                            <button type="submit" class="btn btn-white shadow-none" >Chưa thanh toán</button>
+                                            </form>
                                         </div>
 
                                     </div>
@@ -137,8 +141,9 @@
                                         <div>
                                             <nav class="">
                                                 <ul class="pagination">
+                                                    
                                                     <li class="page-item disabled">
-                                                        <a class="page-link" href="#" tabindex="-1">Trước</a>
+                                                        <a class="page-link" href="#" tabindex="-1"></a>
                                                     </li>
                                                     <li class="page-item active"><a class="page-link" href="#">1</a>
                                                     </li>
@@ -148,7 +153,7 @@
                                                     </li>
                                                     <li class="page-item"><a class="page-link" href="#">3</a></li>
                                                     <li class="page-item">
-                                                        <a class="page-link" href="#">Sau</a>
+                                                        <a class="page-link" href="#"></a>
                                                     </li>
                                                 </ul>
                                             </nav>

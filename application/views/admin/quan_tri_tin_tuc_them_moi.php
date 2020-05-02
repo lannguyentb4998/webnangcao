@@ -57,7 +57,7 @@
             <ul class="menu">
                     <ul class="sub-menu">
                         <li class="menu-item ">
-                            <a href='trang_quan_tri.html' class=' menu-link'>
+                            <a href='<?=base_url();?>admin/trang_quan_tri' class=' menu-link'>
                                                 <span class="menu-label">
                                                     <span class="menu-name">Quản trị hệ thống</span>
                                                 </span>
@@ -69,7 +69,7 @@
                             </a>
                         </li>   
                         <li class="menu-item ">
-                            <a href='quan_tri_tin_tuc.html' class=' menu-link'>
+                            <a href='<?=base_url();?>admin/quan_tri_tin_tuc' class=' menu-link'>
                                                 <span class="menu-label">
                                                     <span class="menu-name">Quản trị tin tức</span>
                                                 </span>
@@ -81,7 +81,7 @@
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href='quan_tri_doi_ngu.html' class=' menu-link'>
+                            <a href='<?=base_url();?>admin/quan_tri_doi_ngu' class=' menu-link'>
                                                 <span class="menu-label">
                                                     <span class="menu-name">Quản trị đội ngũ</span>
                                                 </span>
@@ -93,7 +93,7 @@
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href='quan_tri_phan_hoi.html' class=' menu-link'>
+                            <a href='<?=base_url();?>admin/quan_tri_phan_hoi' class=' menu-link'>
                                                 <span class="menu-label">
                                                     <span class="menu-name">Quản trị phản hồi</span>
                                                 </span>
@@ -105,7 +105,7 @@
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href='quan_tri_don_hang.html' class=' menu-link'>
+                            <a href='<?=base_url();?>admin/quan_tri_don_hang' class=' menu-link'>
                                                 <span class="menu-label">
                                                     <span class="menu-name">Quản trị đơn hàng</span>
                                                 </span>
@@ -117,7 +117,7 @@
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href='quan_tri_khach_hang.html' class=' menu-link'>
+                            <a href='<?=base_url();?>admin/quan_tri_khach_hang' class=' menu-link'>
                                                 <span class="menu-label">
                                                     <span class="menu-name">Quản trị khách hàng</span>
                                                 </span>
@@ -267,7 +267,14 @@
                                 <label for="txtNoiDung">Nội dung bài viết</label>
                                 <input type="text" class="form-control" name="txtNoiDung">
                             </div>
-                            
+                            <div class="form-group" >
+                                <label for="txtNoiDung2">Nội dung bài viết 2</label>
+                                <input type="text" class="form-control" name="txtNoiDung2">
+                            </div>
+                            <div class="form-group" >
+                                <label for="txtNoiDung3">Nội dung bài viết 3</label>
+                                <input type="text" class="form-control" name="txtNoiDung3">
+                            </div>
                             <div class="form-group" >
                                 <label for="txtNgayTao">Ngày tạo</label>
                                 <input type="Date" class="form-control" name="txtNgayTao">

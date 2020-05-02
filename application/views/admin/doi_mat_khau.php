@@ -35,7 +35,7 @@
 <!--Material Icons-->
 <link rel='stylesheet' type='text/css' href='https://d33wubrfki0l68.cloudfront.net/css/0940f25997c8e50e65e95510b30245d116f639f0/light/assets/fonts/feather/feather-icons.css'/>
 <!--Bootstrap + atmos Admin CSS-->
-<link rel='stylesheet' type='text/css' href='C:/wgetdown/admin/assets/css/atmos.min.css'/>
+<link rel='stylesheet' type='text/css' href='<?=base_url();?>atmos.min.css'/>
 <!-- Additional library for page -->
 
 </head>
@@ -57,13 +57,26 @@
 
                             </div>
                             <h3 class="text-center">Đổi mật khẩu</h3>
-                            <form action="index.html" method="post">
+                            <form action="<?=base_url().'admin/dang_nhap/thuc_hien_doi_mat_khau';?>" method="post">
+                                <div class="form-group">
+                                    <label>Email</label>
+
+                                    <div class="input-group input-group-flush mb-3">
+                                        <input type="email" class="form-control form-control-prepended"
+                                               placeholder="Email" name="txtEmail">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="form-group">
                                     <label>Mật khẩu mới</label>
 
                                     <div class="input-group input-group-flush mb-3">
-                                        <input type="email" class="form-control form-control-prepended"
-                                               placeholder="Mật khẩu mới">
+                                        <input type="password" class="form-control form-control-prepended"
+                                               placeholder="Mật khẩu mới" name="txtMatKhauMoi">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
                                                 
@@ -74,8 +87,8 @@
                                 <div class="form-group">
                                     <label>Nhập lại mật khẩu</label>
                                     <div class="input-group input-group-flush mb-3">
-                                        <input type="email" class="form-control form-control-prepended"
-                                               placeholder="Nhập lại mật khẩu">
+                                        <input type="password" class="form-control form-control-prepended"
+                                               placeholder="Nhập lại mật khẩu" name="txtNhapLaiMatKhau">
                                         <div class="input-group-prepend">
                                             <div class="input-group-text">
                                                 
@@ -84,9 +97,8 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <a class="btn btn-block  btn-sucess" href="doi_mat_khau_thanh_cong.html" >
-                                        ĐỔI MẬT KHẨU
-                                    </a>
+                                    <button type="submit" class="btn btn-block  btn-sucess">ĐỔI MẬT K HẨU</button>
+                                    
                                 </div>
                             </form>
 

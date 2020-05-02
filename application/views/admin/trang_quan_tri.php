@@ -84,23 +84,25 @@
 
                     <div class="row">
                         <div class="col-12 m-b-10">
-                            <h3>Nhân viên xuất sắc</h3>
+                            <h3>Nhân viên mới</h3>
                         </div>
+                        <?php foreach ($nhan_vien_moi as $row) { ;?>
+                         
                         <div class="col-md-6 col-lg-3 h-100 m-b-30">
                             <div class="card ">
 
                                 <div class="card-body">
                                     <div class="text-center">
-                                        <h3>Trần Dần</h3>
-                                        <p class="text-overline text-muted">3 năm kinh nghiệm</p>
+                                        <h3><?=$row->name;?></h3>
+                                        <p class="text-overline text-muted"><?=$row->so_nam_kinh_nghiem;?> năm kinh nghiệm</p>
                                         <div class="m-b-10">
-                                            <img src="assets/img/nv1.jpg" alt="">
+                                            <img src="<?=base_url();?>/img/bg-img/<?=$row->anh_minh_hoa;?>" alt="" style="height: 100px; width: auto">
                                         </div>
                                         <div class="font-weight-bold">
                                                 <div class="text-muted">  <i class="mdi mdi-star text-warning"></i>
                                                 <i class="mdi mdi-star text-warning"></i>
                                                 <i class="mdi mdi-star text-warning"></i></div>
-                                                <div>3 Stars (150 Reviews)</div>
+                                                
                                         </div>
                                         <div class="bg-gray-200 m-t-10 p-all-10 text-overline">  </div>
 
@@ -108,104 +110,14 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-3 h-100 m-b-30">
-                            <div class="card ">
-
-                                <div class="card-body">
-                                    <div class="text-center">
-                                        <h3>Nguyễn Văn An</h3>
-                                        <p class="text-overline text-muted">5 năm kinh nghiệm</p>
-                                        <div class="m-b-10">
-                                            <img src="assets/img/nv2.jpg"  alt="">
-                                        </div>
-                                        <div class="font-weight-bold">
-                                            <div class="text-muted">  <i class="mdi mdi-star text-warning"></i>
-                                                <i class="mdi mdi-star text-warning"></i>
-                                                <i class="mdi mdi-star text-warning"></i>
-                                                <i class="mdi mdi-star text-warning"></i></div>
-                                            <div>4 Stars (900 Reviews)</div>
-                                        </div>
-                                        <div class="bg-gray-200 m-t-10 p-all-10 text-overline">  </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-3 h-100 m-b-30">
-                            <div class="card ">
-
-                                <div class="card-body">
-                                    <div class="text-center">
-                                        <h3>Nguyễn Trà My</h3>
-                                        <p class="text-overline text-muted">4 năm kinh nghiệm</p>
-                                        <div class="m-b-10">
-                                            <img src="assets/img/nv3.jpg"  alt="">
-                                        </div>
-                                        <div class="font-weight-bold">
-                                            <div class="text-muted">  <i class="mdi mdi-star text-warning"></i>
-                                                <i class="mdi mdi-star text-warning"></i>
-                                                <i class="mdi mdi-star text-warning"></i>
-                                                <i class="mdi mdi-star-half text-warning"></i>
-                                            </div>
-                                            <div>3.5 Stars (520 Reviews)</div>
-                                        </div>
-                                        <div class="bg-gray-200 m-t-10 p-all-10 text-overline">  </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-3 h-100 m-b-30">
-                            <div class="card ">
-
-                                <div class="card-body">
-                                    <div class="text-center">
-                                        <h3>Nguyễn Tuấn Anh</h3>
-                                        <p class="text-overline text-muted">6 năm kinh nghiệm</p>
-                                        <div class="m-b-10">
-                                            <img src="assets/img/nv1.jpg"  alt="">
-                                        </div>
-                                        <div class="font-weight-bold">
-                                            <div class="text-muted">  <i class="mdi mdi-star text-warning"></i>
-                                                <i class="mdi mdi-star text-warning"></i>
-                                                <i class="mdi mdi-star text-warning"></i>
-                                                <i class="mdi mdi-star text-warning"></i>
-                                                <i class="mdi mdi-star-half text-warning"></i>
-                                            </div>
-                                            <div>4 Stars (220 Reviews)</div>
-                                        </div>
-                                        <div class="bg-gray-200 m-t-10 p-all-10 text-overline">  </div>
-
-                                    </div>
-                                </div>
-                            </div>
+                        <?php } ?>
+                        
                         </div>
 
                     </div>
 
                 </div>
-                <div class="col-12">
-                    <h3 class="p-b-10">Doanh thu</h3>
-                </div>
-                <div class="col-lg-8">
-
-                    <div class="card m-b-30">
-                        <div class="card-body">
-                            <div id="chart-12"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 ">
-
-                    <div class="card">
-                        <div class="card-body">
-
-                            <h5 class="text-center">Quantitative Analysis</h5>
-                            <div class="text-center text-overline">past quarter</div>
-                            <div id="chart-11"></div>
-                        </div>
-                    </div>
-                </div>
+                
             <div class="container">
                 <div class="row">
                 <div class="col-12 m-b-10">
@@ -219,22 +131,26 @@
                                 <th>Tài khoản</th>
                                 <th>Địa chỉ</th>
                                 <th>Tuổi</th>
-                                <th>Ngày truy cập</th>
+                                <th>Ngày tạo</th>
                             </tr>
                             </thead>
                             <tbody>
+                            <?php foreach ($khach_hang_moi as $row) { ;?>
+                             
                             <tr>
                                 <td>
-                                    <div class="avatar avatar-sm "><img src="assets/img/users/user-1.jpg"
+                                    <div class="avatar avatar-sm "><img src="<?=base_url();?>/img/bg-img/<?=$row->anh_minh_hoa;?>"
                                      class="avatar-img avatar-sm rounded-circle"
                                                                         alt=""></div>
                                 </td>
-                                <td>Tiger Nixon</td>
-                                <td>System Architect</td>
-                                <td>Edinburgh</td>
-                                <td>61</td>
-                                <td>2011/04/25</td>
+                                <td><?=$row->ten_kh;?></td>
+                                <td><?=$row->email;?></td>
+                                <td><?=$row->quan;?></td>
+                                <td><?=$row->tuoi;?></td>
+                                <td><?=$row->ngay_tao;?></td>
                             </tr>
+
+                            <?php } ?>
                             </tbody>
                         </table>
                     </div>

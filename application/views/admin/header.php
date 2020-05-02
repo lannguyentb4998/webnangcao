@@ -35,7 +35,7 @@
 <!--Material Icons-->
 <link rel='stylesheet' type='text/css' href='https://d33wubrfki0l68.cloudfront.net/css/0940f25997c8e50e65e95510b30245d116f639f0/light/assets/fonts/feather/feather-icons.css'/>
 <!--Bootstrap + atmos Admin CSS-->
-<link rel='stylesheet' type='text/css' href='../atmos.min.css'/>
+<link rel='stylesheet' type='text/css' href='<?=base_url();?>atmos.min.css'/>
 <!-- Additional library for page -->
 
 
@@ -44,7 +44,7 @@
 <aside class="admin-sidebar">
     <div class="admin-sidebar-brand">
         <!-- begin sidebar branding-->
-        <img class="admin-brand-logo" src="../assets/img/logo.jpg" width="100" alt="atmos Logo">
+        <img class="admin-brand-logo" src="<?=base_url();?>assets/img/logo.jpg" width="100" alt="atmos Logo">
         <p></p>
         <!-- end sidebar branding-->
         <div class="ml-auto">
@@ -58,7 +58,7 @@
         <ul class="menu">
                 <ul class="sub-menu">
                     <li class="menu-item ">
-                        <a href='trang_quan_tri' class=' menu-link'>
+                        <a href='<?=base_url();?>admin/trang_quan_tri' class=' menu-link'>
                                             <span class="menu-label">
                                                 <span class="menu-name">Quản trị hệ thống</span>
                                             </span>
@@ -70,7 +70,7 @@
                         </a>
                     </li>   
                     <li class="menu-item ">
-                        <a href='quan_tri_tin_tuc' class=' menu-link'>
+                        <a href='<?=base_url();?>admin/quan_tri_tin_tuc' class=' menu-link'>
                                             <span class="menu-label">
                                                 <span class="menu-name">Quản trị tin tức</span>
                                             </span>
@@ -82,7 +82,7 @@
                         </a>
                     </li>
                     <li class="menu-item">
-                        <a href='quan_tri_doi_ngu' class=' menu-link'>
+                        <a href='<?=base_url();?>admin/quan_tri_doi_ngu' class=' menu-link'>
                                             <span class="menu-label">
                                                 <span class="menu-name">Quản trị đội ngũ</span>
                                             </span>
@@ -94,7 +94,7 @@
                         </a>
                     </li>
                     <li class="menu-item">
-                        <a href='quan_tri_phan_hoi' class=' menu-link'>
+                        <a href='<?=base_url();?>admin/quan_tri_phan_hoi' class=' menu-link'>
                                             <span class="menu-label">
                                                 <span class="menu-name">Quản trị phản hồi</span>
                                             </span>
@@ -106,7 +106,7 @@
                         </a>
                     </li>
                     <li class="menu-item">
-                        <a href='quan_tri_don_hang' class=' menu-link'>
+                        <a href='<?=base_url();?>admin/quan_tri_don_hang' class=' menu-link'>
                                             <span class="menu-label">
                                                 <span class="menu-name">Quản trị đơn hàng</span>
                                             </span>
@@ -118,7 +118,7 @@
                         </a>
                     </li>
                     <li class="menu-item">
-                        <a href='quan_tri_khach_hang' class=' menu-link'>
+                        <a href='<?=base_url();?>admin/quan_tri_khach_hang' class=' menu-link'>
                                             <span class="menu-label">
                                                 <span class="menu-name">Quản trị khách hàng</span>
                                             </span>
@@ -199,9 +199,9 @@
                     </div>
                 </a>
                 <div class="dropdown-menu  dropdown-menu-right"   >
-                    <a class="dropdown-item" href="dang_ky">  Tạo tài khoản mới
+                    <a class="dropdown-item" href="<?=base_url();?>admin/dang_ky">  Tạo tài khoản mới
                     </a>
-                    <a class="dropdown-item" href="quen_mk">  Đặt lại mật khẩu</a>
+                    <a class="dropdown-item" href="<?=base_url();?>admin/dang_nhap/quen_mk">  Đặt lại mật khẩu</a>
                     <a class="dropdown-item" href="#">  Trợ giúp </a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="<?=base_url();?>admin/dang_nhap/dang_xuat"> Đăng xuất</a>

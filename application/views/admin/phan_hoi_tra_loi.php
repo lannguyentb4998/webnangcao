@@ -228,17 +228,26 @@
                 </div>
             </div>
         </div>
-        <form method="POST" action="<?=base_url().'admin/quan_tri_phan_hoi/phan_hoi_tra_loi';?>">
+        <form method="POST" action="<?=base_url().'admin/quan_tri_phan_hoi/thuc_hien_tra_loi_phan_hoi';?>">
             <div class="container">
                 <div class="row">
                 <div class="col-md-1 m-b-30">
                 </div>
                     <div class="col-md-10 m-b-30">
-                        <div class="card">
-                            
+                        <div class="card">                         
                             <div class="card-body">
-                                <div id="summernote"></div>
+                                <div >
+                                    <label for="txtEmail">Email</label>
+                                    <input type="text" name="txtEmail" class="form-control" ></input>
+                                </div>
                             </div>
+                            <div class="card-body">
+                                <div >
+                                    <label for="txtNoiDung">Nội dung</label>
+                                    <input type="text" name="txtNoiDung" class="form-control"></input>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -246,8 +255,8 @@
                     <div class="col-9">
                     </div>
                     <div class="col-3">
-                        <a type="submit" class="btn btn-primary" href="phan_hoi_xem.html" >
-                            <i class="mdi mdi-send"></i> Gửi
+                        <button class="btn btn-primary" > Gửi
+                        </button>
                         </a>
                     </div>
                     
