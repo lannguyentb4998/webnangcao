@@ -1,8 +1,134 @@
+bài<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>Adorable Garden</title>
+
+  
+    <link rel="icon" href="<?=base_url();?>img/core-img/favicon.jpg">
+
+    <!--mới sửa-->
+    <link rel="stylesheet" href="<?=base_url();?>style.css">
+
+</head>
+
+<body>
+    
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="preloader-circle"></div>
+        <div class="preloader-img">
+            <img src="<?=base_url();?>img/core-img/leaf.png" alt="">
+        </div>
+    </div>
+
+  
+    <header class="header-area">
+        
+        <div class="top-header-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="top-header-content d-flex align-items-center justify-content-between">
+                            
+                            <div class="top-header-meta">
+                                <a href="#" data-toggle="tooltip" data-placement="bottom" title="infodeercreative@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i> <span>Email: adorablegarden@gmail.com</span></a>
+                                <a href="#" data-toggle="tooltip" data-placement="bottom" title="+1 234 122 122"><i class="fa fa-phone" aria-hidden="true"></i> <span>Liên hệ: 093.171.8229</span></a>
+                            </div>
+
+                            
+                            <div class="top-header-meta d-flex">
+                                
+                                <div class="language-dropdown">
+                                    <div class="dropdown">
+                                        <button class="btn btn-secondary dropdown-toggle mr-30" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ngôn ngữ</button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#">Tiếng Việt</a>
+                                            <a class="dropdown-item" href="#">English</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="login">
+                                    <a href="<?=base_url();?>admin/dang_nhap"><i class="fa fa-user" aria-hidden="true"></i> <span>Đăng nhập</span></a>
+                                </div>
+                                
+                                <div class="cart">
+                                    <a href="<?=base_url();?>gio_hang"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span>Giỏ hàng <span class="cart-quantity"></span></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       
+        <div class="alazea-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                   
+                    <nav class="classy-navbar justify-content-between" id="alazeaNav">
+
+                        
+                        <a href="<?=base_url();?>welcome" class="nav-brand"><img src="<?=base_url();?>img/core-img/logo.jpg" alt=""></a>
+
+                        
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        
+                        <div class="classy-menu">
+
+                            
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            
+                            <div class="classynav">
+                                <ul>
+                                    <li><a href="<?=base_url();?>welcome">TRANG CHỦ</a></li>
+                                    <li><a href="<?=base_url();?>gioi_thieu">GIỚI THIỆU</a></li>
+                                    <li><a href="<?=base_url();?>doi_ngu">ĐỘI NGŨ</a></li>
+                                    <li><a href="<?=base_url();?>tin_tuc">TIN TỨC</a></li>
+                                    <li><a href="<?=base_url();?>lien_he">LIÊN HỆ</a></li>
+                                </ul>
+
+                             
+                                <div id="searchIcon">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                </div>
+
+                            </div>
+                           
+                        </div>
+                    </nav>
+
+                    
+                    <div class="search-form">
+                        <form action="#" method="get">
+                            <input type="search" name="search" id="search" placeholder="Type keywords &amp; press enter...">
+                            <button type="submit" class="d-none"></button>
+                        </form>
+                       
+                        <div class="closeIcon"><i class="fa fa-times" aria-hidden="true"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
 
     <!-- ##### Breadcrumb Area Start ##### -->
     <div class="breadcrumb-area">
-        <!-- Top Breadcrumb Area -->
-        <div class="top-breadcrumb-area bg-img bg-overlay d-flex align-items-center justify-content-center" style="background-image: url(img/bg-img/24.jpg);">
+        <!-- Top Breadcrumb Area (mới sửa) -->
+        <div class="top-breadcrumb-area bg-img bg-overlay d-flex align-items-center justify-content-center" style="background-image: url(<?=base_url();?>img/bg-img/24.jpg);">
             <h2>TIN TỨC</h2>
         </div>
 
@@ -39,15 +165,18 @@
                                     <a href="#"><i class="fa fa-user" aria-hidden="true"></i><?=$tin_tuc_chi_tiet->tac_gia;?></a>
                                 </div>
                                 <div class="post-thumbnail mb-30" style="text-align: center;">
-                                    <img src="<?=base_url();?>/img/bg-img/<?=$tin_tuc_chi_tiet->anh_minh_hoa_1;?>" alt="" >
+                                    <img src="<?=base_url();?>/img/bg-img/<?=$tin_tuc_chi_tiet->anh_minh_hoa_2;?>" alt="" >
                                 </div>
                                 <p style="text-align: justify;"><?=$tin_tuc_chi_tiet->noi_dung;?></p>
-
-                                
+                                <div class="row mb-30">
+                                    <div class="col-lg-7">
+                                        <p style="text-align: justify;"><?=$tin_tuc_chi_tiet->noi_dung_2;?></p>
+                                    </div>
                                     <div class="col-lg-5">
-                                        <img src="<?=base_url();?>/img/bg-img/<?=$tin_tuc_chi_tiet->anh_minh_hoa_2;?>" alt="">
+                                        <img src="<?=base_url();?>/img/bg-img/<?=$tin_tuc_chi_tiet->anh_minh_hoa_1;?>" alt="">
                                     </div>
                                 </div>
+                                <p style="text-align: justify;"><?=$tin_tuc_chi_tiet->noi_dung_3;?></p>
                             </div>
                         </div>
 
@@ -70,63 +199,33 @@
 
                         <!-- Comment Area Start -->
                         <div class="comment_area clearfix">
-                            <h4 class="headline">2 Comments</h4>
-
+                            <?php foreach ($so_luong as $row) {
+                         ;?>
+                            <h4 class="headline"><?=$row->so_luong;?> Bình luận</h4>
+                            <?php };?>
                             <ol>
                                 <!-- Single Comment Area -->
+                                <?php foreach ($binh_luan as $row) {
+                         ;?>
                                 <li class="single_comment_area">
                                     <div class="comment-wrapper d-flex">
                                         <!-- Comment Meta -->
                                         <div class="comment-author">
-                                            <img src="img/bg-img/37.jpg" alt="">
+                                            <img src="<?=base_url();?>/img/bg-img/<?=$row->anh_minh_hoa;?>" alt="">
                                         </div>
                                         <!-- Comment Content -->
                                         <div class="comment-content">
                                             <div class="d-flex align-items-center justify-content-between">
-                                                <h5>Simona Halep</h5>
-                                                <span class="comment-date">09:00 AM,  20 Jun 2018</span>
+                                                <h5><?=$row->ho_ten;?></h5>
+                                                <span class="comment-date"><?=$row->ngay_tao;?></span>
                                             </div>
-                                            <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetu adipisci velit, sed quia non numquam eius modi</p>
-                                            <a class="active" href="#">Reply</a>
-                                        </div>
-                                    </div>
-                                    <ol class="children">
-                                        <li class="single_comment_area">
-                                            <div class="comment-wrapper d-flex">
-                                                <!-- Comment Meta -->
-                                                <div class="comment-author">
-                                                    <img src="img/bg-img/38.jpg" alt="">
-                                                </div>
-                                                <!-- Comment Content -->
-                                                <div class="comment-content">
-                                                    <div class="d-flex align-items-center justify-content-between">
-                                                        <h5>Rafael Nadal</h5>
-                                                        <span class="comment-date">09:30 AM,  20 Jun 2018</span>
-                                                    </div>
-                                                    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetu adipisci velit, sed quia non numquam eius modi</p>
-                                                    <a class="active" href="#">Reply</a>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ol>
-                                </li>
-                                <li class="single_comment_area">
-                                    <div class="comment-wrapper d-flex">
-                                        <!-- Comment Meta -->
-                                        <div class="comment-author">
-                                            <img src="img/bg-img/39.jpg" alt="">
-                                        </div>
-                                        <!-- Comment Content -->
-                                        <div class="comment-content">
-                                            <div class="d-flex align-items-center justify-content-between">
-                                                <h5>Maria Sharapova</h5>
-                                                <span class="comment-date">02:20 PM,  20 Jun 2018</span>
-                                            </div>
-                                            <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetu adipisci velit, sed quia non numquam eius modi</p>
-                                            <a class="active" href="#">Reply</a>
+                                            <p><?=$row->noi_dung;?></p>
                                         </div>
                                     </div>
                                 </li>
+                                 <?php
+                            }
+                            ;?>
                             </ol>
                         </div>
 
@@ -137,25 +236,26 @@
 
                                 <div class="contact-form-area">
                                     <!-- Comment Form -->
-                                    <form action="#" method="post">
+                                    <form method="POST" action="<?=base_url().'tin_tuc/thuc_hien_them_moi_binh_luan';?>">
                                         <div class="row">
                                             <div class="col-12 col-md-6">
                                                 <div class="form-group">
-                                                    <input type="text" class="form-control" id="contact-name" placeholder="Tên">
+                                                    <input type="text" class="form-control"  placeholder="Tên" name="txtHoTen">
                                                 </div>
                                             </div>
                                             <div class="col-12 col-md-6">
                                                 <div class="form-group">
-                                                    <input type="email" class="form-control" id="contact-email" placeholder="Email">
+                                                    <input type="email" class="form-control"  placeholder="Email" name="txtEmail">
                                                 </div>
                                             </div>
                                             <div class="col-12">
                                                 <div class="form-group">
-                                                    <textarea class="form-control" name="message" id="message" cols="30" rows="10" placeholder="Nội dung"></textarea>
+                                                    <textarea class="form-control"   cols="30" rows="10" placeholder="Nội dung" name="txtNoiDung"></textarea>
                                                 </div>
                                             </div>
                                             <div class="col-12">
                                                 <button type="submit" class="btn alazea-btn">Bình luận</button>
+                                                <input name="txtID" type="hidden" value="<?=$tin_tuc_chi_tiet->id;?>">
                                             </div>
                                         </div>
                                     </form>
@@ -184,7 +284,7 @@
                             <div class="author-widget">
                                 <div class="author-thumb-name d-flex align-items-center">
                                     <div class="author-thumb">
-                                        <img src="img/bg-img/29.jpg" alt="">
+                                        <img src="<?=base_url();?>img/bg-img/29.jpg" alt="">
                                     </div>
                                     <div class="author-name">
                                         <h5>Nắng</h5>
@@ -207,57 +307,24 @@
                                 <h4>Bài viết gần đây</h4>
                             </div>
 
+                            <?php foreach ($bai_viet_gan_day as $row) {
+                         ;?>
                             <!-- Single Latest Posts -->
                             <div class="single-latest-post d-flex align-items-center">
                                 <div class="post-thumb">
-                                    <img src="img/bg-img/cay-canh-tuong-trung-cho-tinh-yeu.jpg" alt="">
+                                    <img src="<?=base_url();?>/img/bg-img/<?=$row->anh_minh_hoa_1;?>" alt="">
                                 </div>
                                 <div class="post-content">
                                     <a href="#" class="post-title">
-                                        <h6>Bật mí top 5 cây cảnh tượng trưng cho tình yêu</h6>
+                                        <h6><?=$row->tieu_de?></h6>
                                     </a>
-                                    <a href="#" class="post-date">20 Jun 2018</a>
+                                    <a href="#" class="post-date"><?=$row->ngay_tao?></a>
                                 </div>
                             </div>
 
-                            <!-- Single Latest Posts -->
-                            <div class="single-latest-post d-flex align-items-center">
-                                <div class="post-thumb">
-                                    <img src="img/bg-img/bach_ma_hoang_tu.jpg" alt="">
-                                </div>
-                                <div class="post-content">
-                                    <a href="#" class="post-title">
-                                        <h6>Ý nghĩa của cây Bạch Mã Hoàng Tử và những điều ít người biết</h6>
-                                    </a>
-                                    <a href="#" class="post-date">20 Jun 2018</a>
-                                </div>
-                            </div>
-
-                            <!-- Single Latest Posts -->
-                            <div class="single-latest-post d-flex align-items-center">
-                                <div class="post-thumb">
-                                    <img src="img/bg-img/cay_xuong_rong.jpg" alt="">
-                                </div>
-                                <div class="post-content">
-                                    <a href="#" class="post-title">
-                                        <h6>Cây xương rồng: Biểu tượng của ý chí mạnh mẽ, bền bỉ trong cuộc sống</h6>
-                                    </a>
-                                    <a href="#" class="post-date">20 Jun 2018</a>
-                                </div>
-                            </div>
-
-                            <!-- Single Latest Posts -->
-                            <div class="single-latest-post d-flex align-items-center">
-                                <div class="post-thumb">
-                                    <img src="img/bg-img/hoa_cam_chuong.jpg" alt="">
-                                </div>
-                                <div class="post-content">
-                                    <a href="#" class="post-title">
-                                        <h6>Cẩm chướng - loài hoa tặng mẹ</h6>
-                                    </a>
-                                    <a href="#" class="post-date">20 Jun 2018</a>
-                                </div>
-                            </div>
+                            <?php
+                            }
+                            ;?>
                         </div>
 
                         <!-- ##### Single Widget Area ##### -->
@@ -287,29 +354,15 @@
                             </div>
 
                             <!-- Single Best Seller Products -->
-                            <div class="single-best-seller-product d-flex align-items-center">
-                                <div class="product-thumbnail">
-                                    <a href="shop-details.html"><img src="img/bg-img/nv1.jpg" alt=""></a>
-                                </div>
-                                <div class="product-info">
-                                    <a href="shop-details.html">Nguyễn Văn Anh</a>
-                                    <div class="ratings">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-
+                            <?php foreach ($nhan_vien_moi as $row) {
+                         ;?>
                             <!-- Single Best Seller Products -->
                             <div class="single-best-seller-product d-flex align-items-center">
                                 <div class="product-thumbnail">
-                                    <a href="shop-details.html"><img src="img/bg-img/nv2.jpg" alt=""></a>
+                                    <a href="shop-details.html"> <img src="<?=base_url();?>/img/bg-img/<?=$row->anh_minh_hoa;?>" alt=""></a>
                                 </div>
                                 <div class="product-info">
-                                    <a href="shop-details.html">Trần Trung Hiếu</a>
+                                    <a href="shop-details.html"><?=$row->name?></a>
                                     <div class="ratings">
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
@@ -319,23 +372,9 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <!-- Single Best Seller Products -->
-                            <div class="single-best-seller-product d-flex align-items-center">
-                                <div class="product-thumbnail">
-                                    <a href="shop-details.html"><img src="img/bg-img/nv3.jpg" alt=""></a>
-                                </div>
-                                <div class="product-info">
-                                    <a href="shop-details.html">Nguyễn Trà My</a>
-                                    <div class="ratings">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
+                            <?php
+                            }
+                            ;?>
 
                         </div>
                     </div>
@@ -349,15 +388,15 @@
 
     <!-- ##### All Javascript Files ##### -->
     <!-- jQuery-2.2.4 js -->
-    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <script src="<?=base_url();?>js/jquery/jquery-2.2.4.min.js"></script>
     <!-- Popper js -->
-    <script src="js/bootstrap/popper.min.js"></script>
+    <script src="<?=base_url();?>js/bootstrap/popper.min.js"></script>
     <!-- Bootstrap js -->
-    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="<?=base_url();?>js/bootstrap/bootstrap.min.js"></script>
     <!-- All Plugins js -->
-    <script src="js/plugins/plugins.js"></script>
+    <script src="<?=base_url();?>js/plugins/plugins.js"></script>
     <!-- Active js -->
-    <script src="js/active.js"></script>
+    <script src="<?=base_url();?>js/active.js"></script>
 </body>
 
 </html>

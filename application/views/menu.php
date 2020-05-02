@@ -75,7 +75,7 @@
                     <nav class="classy-navbar justify-content-between" id="alazeaNav">
 
                         
-                        <a href="index" class="nav-brand"><img src="<?=base_url();?>img/core-img/logo.jpg" alt=""></a>
+                        <a href="welcome" class="nav-brand"><img src="<?=base_url();?>img/core-img/logo.jpg" alt=""></a>
 
                         
                         <div class="classy-navbar-toggler">

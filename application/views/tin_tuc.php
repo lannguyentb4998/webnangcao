@@ -138,7 +138,7 @@
                                     <a href="shop-details.html"> <img src="<?=base_url();?>/img/bg-img/<?=$row->anh_minh_hoa;?>" alt=""></a>
                                 </div>
                                 <div class="product-info">
-                                    <a href="shop-details.html"><?=$row->ten_nv?></a>
+                                    <a href="shop-details.html"><?=$row->name?></a>
                                     <div class="ratings">
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>

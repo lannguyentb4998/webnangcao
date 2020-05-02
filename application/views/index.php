@@ -243,55 +243,7 @@
                 <div class="col-12">
                     <div class="testimonials-slides owl-carousel">
 
-                        <!-- Single Testimonial Slide 
-                        <div class="single-testimonial-slide">
-                            <div class="row align-items-center">
-                                <div class="col-12 col-md-6">
-                                    <div class="testimonial-thumb">
-                                        <img src="img/bg-img/13.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <div class="testimonial-content">
-                                         Section Heading 
-                                        <div class="section-heading">
-                                            <h2>NHẬN XÉT</h2>
-                                            <p>Đánh giá dịch vụ từ khách hàng của chúng tôi.</p>
-                                        </div>
-                                        <p>“Tôi rất vui được làm việc cùng Adorable Garden. Dịch vụ làm vườn và tư vấn của họ thật tuyệt vời, chúng tôi có một khu vườn tuyệt đẹp và dễ quản lý. Cảm ơn các bạn!”</p>
-                                        <div class="testimonial-author-info">
-                                            <h6>Bà Trịnh Thanh Thúy</h6>
-                                            <p>Giám đốc công ty Thiên Kim</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                         Single Testimonial Slide 
-                        <div class="single-testimonial-slide">
-                            <div class="row align-items-center">
-                                <div class="col-12 col-md-6">
-                                    <div class="testimonial-thumb">
-                                        <img src="img/bg-img/14.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <div class="testimonial-content">
-                                         Section Heading 
-                                        <div class="section-heading">
-                                            <h2>NHẬN XÉT</h2>
-                                            <p>Đánh giá dịch vụ từ khách hàng của chúng tôi.</p>
-                                        </div>
-                                        <p>“Những con người của AG thật sáng tạo, họ đã đưa ra các giải pháp hay ho cho các vấn đề trang trí khó nhằn. Thật may mắn khi biết tới Adorable Home.”</p>
-                                        <div class="testimonial-author-info">
-                                            <h6>Ông Hà Mạnh Hùng</h6>
-                                            <p>CEO công ty ETC</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
+                       
                           <?php foreach ($phan_hoi as $row) {
                          ;?>
                         <!-- Single Testimonial Slide -->
@@ -299,7 +251,7 @@
                             <div class="row align-items-center">
                                 <div class="col-12 col-md-6">
                                     <div class="testimonial-thumb">
-                                        <img src="img/bg-img/15.jpg" alt="">
+                                        <img src="<?=base_url();?>/img/bg-img/<?=$row->anh_minh_hoa;?>" alt="">
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6">
@@ -312,7 +264,7 @@
                                         <p><?=$row->noi_dung_phan_hoi?></p>
                                         <div class="testimonial-author-info">
                                             <h6><?=$row->ho_ten?></h6>
-                                            <p><?=$row->tai_khoan?></p>
+                                            <p><?=$row->email?></p>
                                         </div>
                                     </div>
                                 </div>
