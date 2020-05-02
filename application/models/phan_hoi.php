@@ -52,6 +52,27 @@ Class phan_hoi extends CI_Model {
 			// Thực hiện chèn dữ liệu vào bảng TIN TỨC
 			$this->db->insert('tbl_phan_hoi', $data);}
 	}
+
+	public function them_moi_binh_luan()
+	{
+		if(isset($_POST['txtHoTen']) && isset($_POST['txtEmail'])&& isset($_POST['txtNoiDung'])&& isset($_POST['txtID'])){
+		// Dữ liệu thu được từ FORM nhập dữ liệu
+			$ho_ten = $_POST['txtHoTen'];
+			$email = $_POST['txtEmail'];
+			$noi_dung = $_POST['txtNoiDung'];
+			$id = $_POST['txtID'];
+
+			// Đẩy dữ liệu này vào CSDL
+			$data = array(
+				'ho_ten' => $ho_ten,
+				'tai_khoan' => $email,
+				'noi_dung' => $noi_dung,
+				'id_tin_tuc' => $id
+			);
+
+			// Thực hiện chèn dữ liệu vào bảng TIN TỨC
+			$this->db->insert('tbl_binh_luan', $data);}
+	}
 }
 
 ;?>

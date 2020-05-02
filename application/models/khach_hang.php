@@ -4,7 +4,7 @@ Class khach_hang extends CI_Model {
 	{
 		//Viết câu lệnh truy vấn SQL
 		$query = $this->db->query("
-			SELECT  id,ten_kh, (YEAR(CURDATE()) - YEAR(ngaysinh)) - (RIGHT(CURDATE(), 5) < RIGHT(ngaysinh, 5)) as tuoi, email, SDT, anh_minh_hoa
+			SELECT  id,ten_kh, (YEAR(CURDATE()) - YEAR(ngaysinh)) - (RIGHT(CURDATE(), 5) < RIGHT(ngaysinh, 5)) as tuoi, email, SDT, anh_minh_hoa, date(ngay_tao) as ngay_tao
 			FROM tbl_khach_hang
 		");
 		

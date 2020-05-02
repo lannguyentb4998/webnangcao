@@ -1,5 +1,18 @@
 <?php
 Class nhan_vien extends CI_Model {
+	
+	function __construct()
+	{
+		parent::__construct();
+
+		// Load thư viện URL
+		$this->load->helper('url');
+
+		// Kết nối đến CSDL
+		$this->load->database();
+
+	}
+
 	public function lay_doi_ngu()
 	{
 		//Viết câu lệnh truy vấn SQL
@@ -11,6 +24,19 @@ Class nhan_vien extends CI_Model {
 		//Trả kết quả truy vấn dữ liệu
 		return $query->result();
 	}
+
+	public function lay_danh_gia_theo_loai($loai_danh_gia_id)
+        {
+			// Viết câu lệnh truy vấn SQL lấy các tin tức sự kiện (có mã loai_tin_id)
+			$query = $this->db->query("
+				SELECT * 
+				FROM tbl_danh_gia
+				WHERE loai_danh_gia_id=".$loai_danh_gia_id."
+			");
+
+			// Trả kết quả truy vấn dữ liệu
+            return $query->result();
+        }
 
 	// Mục đích Lấy tin tức theo ID
 	public function lay_doi_ngu_theo_ID($id)
@@ -130,6 +156,31 @@ Class nhan_vien extends CI_Model {
 		
 		//Trả kết quả truy vấn dữ liệu
 		return $query->result();
+	}
+
+	public function them_moi_danh_gia()
+	{
+		
+		if(isset($_POST['txtHoTen']) && isset($_POST['txtLoaiDanhGia'])&& isset($_POST['txtNoiDung'])&& isset($_POST['txtDiem'])&& isset($_POST['txtID'])){
+		// Dữ liệu thu được từ FORM nhập dữ liệu
+			$id = $_POST['txtID'];
+			$ho_ten = $_POST['txtHoTen'];
+			$loai_danh_gia_id = $_POST['txtLoaiDanhGia'];
+			$noi_dung = $_POST['txtNoiDung'];
+			$diem = $_POST['txtDiem'];
+
+			// Đẩy dữ liệu này vào CSDL
+			$data = array(
+				'ho_ten' => $ho_ten,
+				'loai_danh_gia_id' => $loai_danh_gia_id,
+				'noi_dung' => $noi_dung,
+				'diem' => $diem,
+				'id_nv' => $id
+			);
+
+			// Thực hiện chèn dữ liệu vào bảng TIN TỨC
+			$this->db->insert('tbl_danh_gia', $data);
+		}		
 	}
 
 }

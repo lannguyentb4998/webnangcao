@@ -4,7 +4,7 @@ Class m_tin_tuc extends CI_Model {
 	{
 		//Viết câu lệnh truy vấn SQL
 		$query = $this->db->query("
-			SELECT *
+			SELECT tieu_de, tac_gia, noi_dung_doc_thu,noi_dung, noi_dung_2, noi_dung_3, date(ngay_tao) as ngay_tao, anh_minh_hoa_1, anh_minh_hoa_2, id
 			FROM tbl_tin_tuc
 		");
 		
@@ -28,7 +28,7 @@ Class m_tin_tuc extends CI_Model {
 
 	public function them_moi_tin_tuc()
 	{
-		if(isset($_POST['txtTieuDe']) && isset($_POST['txtTacGia'])&& isset($_POST['txtNoiDungDocThu'])&& isset($_POST['txtNoiDung'])&& isset($_POST['txtNgayTao'])&& isset($_POST['txtAnhMinhHoa1'])&& isset($_POST['txtAnhMinhHoa2'])){
+		if(isset($_POST['txtTieuDe']) && isset($_POST['txtTacGia'])&& isset($_POST['txtNoiDungDocThu'])&& isset($_POST['txtNoiDung'])&& isset($_POST['txtNgayTao'])&& isset($_POST['txtAnhMinhHoa1'])&& isset($_POST['txtAnhMinhHoa2']) && isset($_POST['txtNoiDung2'])&& isset($_POST['txtNoiDung3'])){
 		// Dữ liệu thu được từ FORM nhập dữ liệu
 			$tieu_de = $_POST['txtTieuDe'];
 			$tac_gia = $_POST['txtTacGia'];
@@ -37,6 +37,8 @@ Class m_tin_tuc extends CI_Model {
 			$ngay_tao = $_POST['txtNgayTao'];
 			$anh_minh_hoa_1 = $_POST['txtAnhMinhHoa1'];
 			$anh_minh_hoa_2 = $_POST['txtAnhMinhHoa2'];
+			$noi_dung2 = $_POST['txtNoiDung2'];
+			$noi_dung3 = $_POST['txtNoiDung3'];
 
 			// Đẩy dữ liệu này vào CSDL
 			$data = array(
@@ -46,7 +48,10 @@ Class m_tin_tuc extends CI_Model {
 				'noi_dung' => $noi_dung,
 				'ngay_tao' => $ngay_tao,
 				'anh_minh_hoa_1' => $anh_minh_hoa_1,
-				'anh_minh_hoa_2' => $anh_minh_hoa_2
+				'anh_minh_hoa_2' => $anh_minh_hoa_2,
+				'noi_dung_2' => $noi_dung2,
+				'noi_dung_3' => $noi_dung3,
+				
 			);
 
 			// Thực hiện chèn dữ liệu vào bảng TIN TỨC
